@@ -46,7 +46,9 @@ export default function Lanyard({
   }, []);
 
   return (
-    <div className="relative z-0 w-full h-screen flex justify-center items-center transform scale-100 origin-center">
+    
+
+    <div className="absolute z-0 w-full h-screen flex justify-end items-end transform scale-100 ">
       <Canvas
         camera={{ position: position, fov: fov }}
         dpr={[1, isMobile ? 1.5 : 2]}
@@ -96,6 +98,9 @@ export default function Lanyard({
         </Environment>
       </Canvas>
     </div>
+
+   
+
   );
 }
 function Band({
@@ -227,7 +232,7 @@ function Band({
 
   return (
     <>
-      <group position={[0, 4, 0]}>
+      <group position={[3, 4, 0]} >
         <RigidBody ref={fixed} {...segmentProps} type="fixed" />
         <RigidBody position={[0.5, 0, 0]} ref={j1} {...segmentProps}>
           <BallCollider args={[0.1]} />
