@@ -7,8 +7,8 @@ import { BallCollider, CuboidCollider, Physics, RigidBody, useRopeJoint, useSphe
 import { MeshLineGeometry, MeshLineMaterial } from 'meshline';
 
 // replace with your own imports, see the usage snippet for details
-import cardGLB from './assets/card.glb';
-import lanyard from './assets/lanyard.png';
+import cardGLB from '../assets/card.glb';
+import lanyard from '../assets/lanyard.png';
 
 import * as THREE from 'three';
 
@@ -38,7 +38,8 @@ export default function Lanyard({
   lanyardWidth = 1
 }) {
   const [isMobile, setIsMobile] = useState(() => typeof window !== 'undefined' && window.innerWidth < 768);
-
+ console.log(window.innerWidth);
+ 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 768);
     window.addEventListener('resize', handleResize);
@@ -48,10 +49,10 @@ export default function Lanyard({
   return (
     
 
-    <div className="absolute z-0 w-full h-screen flex justify-end items-end transform scale-100 ">
+    <div className="fixed z-100 w-full h-screen flex justify-end items-end transform scale-100 ">
       <Canvas
         camera={{ position: position, fov: fov }}
-        dpr={[1, isMobile ? 1.5 : 2]}
+        dpr={[1, isMobile ? 1 : 2]}
         gl={{ alpha: transparent }}
         onCreated={({ gl }) => gl.setClearColor(new THREE.Color(0x000000), transparent ? 0 : 1)}
       >
@@ -230,9 +231,25 @@ function Band({
   curve.curveType = 'chordal';
   texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
 
+  const [size, setsize] = useState(3)
+
+  useEffect(() => {
+    if(window.innerWidth>1000){
+  setsize(3)
+}
+if(window.innerWidth<1000){
+  setsize(2)
+}
+  
+    
+  }, [])
+  
+console.log(size);
+
+
   return (
     <>
-      <group position={[3, 4, 0]} >
+      <group position={isMobile?[1, 4, 1]:[size, 4, 0]} >
         <RigidBody ref={fixed} {...segmentProps} type="fixed" />
         <RigidBody position={[0.5, 0, 0]} ref={j1} {...segmentProps}>
           <BallCollider args={[0.1]} />
