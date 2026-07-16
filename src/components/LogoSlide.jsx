@@ -1,4 +1,4 @@
-import LogoLoop from './components/LogoLoop';
+import LogoLoop from './LogoLoop';
 import { SiReact, SiJavascript, SiFigma, SiTailwindcss ,SiRefinedgithub,SiGit,SiHtml5,SiCss,SiNodedotjs,SiExpress,SiPostman,SiMongodb,SiFramer } from 'react-icons/si';
 
 const techLogos = [
@@ -33,7 +33,7 @@ export  function LogoSlide() {
         speed={120}
         direction="left"
         logoHeight={window.innerWidth<700?35:50}
-        gap={60}
+        gap={window.innerWidth<700?30:60}
         hoverSpeed={0.8}
         scaleOnHover={true}
         fadeOut
