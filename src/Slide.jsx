@@ -9,7 +9,7 @@ const delay=[2,2.2,2.4,2.6,2.8]
 
 
   return (
-    <div className='flex relative h-screen overflow-hidden'>
+    <div className='flex relative h-screen overflow-clip'>
 
         <div className='absolute w-full z-20 flex'>
                   {
