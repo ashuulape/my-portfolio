@@ -1,10 +1,19 @@
 import React, { useCallback, useLayoutEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 
+
+const item=[
+  { label: 'Home', ariaLabel: 'Go to home page', link: '/' },
+  { label: 'About', ariaLabel: 'Learn about us', link: '/about' },
+  { label: 'Projects', ariaLabel: 'View my projects', link: '/projects' },
+  { label: 'Contact', ariaLabel: 'Get in touch', link: '/contact' },
+  { label: 'Somethng Intresting', ariaLabel: 'Get in touch', link: '/Infinity' }
+];
+
 export const StaggeredMenu = ({
   position = 'right',
   colors = ['#B497CF', '#5227FF'],
-  items = [],
+  items = item,
   socialItems = [],
   displaySocials = true,
   displayItemNumbering = true,

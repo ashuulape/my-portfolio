@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Slide  } from './Slide'
 
 import Lanyard from './components/Lanyard'
@@ -8,16 +8,28 @@ import RotatingText from './components/RotatingText'
 import StaggeredMenu from './components/StaggeredMenu';
 import logo from './assets/mask.png'
 import { LogoSlide } from './components/LogoSlide';
+import { motion } from 'framer-motion';
+import SplitText from './components/SplitText'
 
 
 
 const Home = () => {
+    const [text, settext] = useState(true)
+
+    useEffect(() => {
+        
+        const time = setTimeout(() => settext(false), 2000)
+        
+        return () => clearTimeout(time)
+      }, [])
+
 
 const menuItems = [
   { label: 'Home', ariaLabel: 'Go to home page', link: '/' },
   { label: 'About', ariaLabel: 'Learn about us', link: '/about' },
   { label: 'Projects', ariaLabel: 'View my projects', link: '/projects' },
-  { label: 'Contact', ariaLabel: 'Get in touch', link: '/contact' }
+  { label: 'Contact', ariaLabel: 'Get in touch', link: '/contact' },
+  { label: 'Somethng Intresting', ariaLabel: 'Get in touch', link: '/Infinity' }
 ];
 
 const socialItems = [
@@ -32,6 +44,29 @@ const socialItems = [
       <div className="absolute w-full z-999 pointer-events-none">
         <Slide />
       </div>
+
+      {text && <motion.div 
+  animate={{
+    opacity:[0],
+            }}
+    transition={{ duration: 0.8, delay: 1.5 }}
+  className='absolute flex w-full h-[100dvh] z-99999 text-center items-center justify-center'>
+
+            <SplitText
+          text="Home"
+          className="text-5xl font-semibold text-center text-black "
+          delay={50}
+          duration={1.25}
+          ease="power3.out"
+          splitType="chars"
+          from={{ opacity: 0, y: 40 }}
+          to={{ opacity: 1, y: 0 }}
+          threshold={0.1}
+          rootMargin="-100px"
+          textAlign="center"/>
+
+
+    </motion.div>}
 
     <div className="fixed h-full w-full pointer-events-none z-0  ">
       <div className="absolute h-full w-full ">

@@ -9,9 +9,9 @@ const MOBILE_BREAKPOINT = 768;
 const cardData = [
   {
     color: '#120F17',
-    title: 'Analytics',
-    description: 'Track user behavior',
-    label: 'Insights'
+    title: 'B-Tech',
+    description: 'in Electronics and Computer, 26',
+    label: 'Eduction'
   },
   {
     color: '#120F17',
@@ -27,15 +27,15 @@ const cardData = [
   },
   {
     color: '#120F17',
-    title: 'Automation',
-    description: 'Streamline workflows',
-    label: 'Efficiency'
+    title: 'Developer',
+    description: 'FrontEnd / Fullstack Developer',
+    label: 'Role'
   },
   {
     color: '#120F17',
-    title: 'Integration',
-    description: 'Connect favorite tools',
-    label: 'Connectivity'
+    title: 'MERN',
+    description: 'MongoDB, Express, React, Node',
+    label: 'Tech Stack'
   },
   {
     background:'https://imgs.search.brave.com/ibK5t1vfrErVjwSHgGccjGC8rwNND_6LZXYT4UTduJM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wcmV2/aWV3LnJlZGQuaXQv/ZHJvcC15b3VyLWJl/c3QtcmRyLXNjcmVl/bnNob3RzLXYwLWh0/am1xdHBzZGJ6ZjEu/anBlZz93aWR0aD00/MzIwJmZvcm1hdD1w/anBnJmF1dG89d2Vi/cCZzPWNhY2U3OWM2/OThiY2IzNWQ4Zjg5/YWViYzkxMjg5NDc2/ODkzODU2NGE',
