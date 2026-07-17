@@ -3,7 +3,7 @@ import StaggeredMenu from './components/StaggeredMenu'
 import logo from '../src/assets/mask.png'
 import { Slide } from './Slide';
 import MagicBento from './components/MagicBento'
-import Spline from '@splinetool/react-spline';
+import TextPressure from './/components/TextPressure';
 
 
 const AboutMe = () => {
@@ -23,11 +23,13 @@ const socialItems = [
 ];
 
   return (
-    <div className='h-[100dvh] w-screen relstive bg-black '>
+    <div className='h-[100dvh] w-screen relstive bg-black pointer-events-none '>
         <div className='absolute w-full overflow-clip z-99'>
             <Slide/>
         </div>
-     <div className='h-screen w-screen absolute pointer-events-none z-10'>
+     <div className='h-full w-screen absolute pointer-events-none z-10'>
+      
+
    <StaggeredMenu
      position="left"
      items={menuItems}
@@ -46,8 +48,21 @@ const socialItems = [
    />
        </div>
 
-       <div className='w-full h-auto flex items-center justify-end p-[5vw]'>
-            <MagicBento 
+       <div className='w-full h-fit flex flex-col gap-10 items-center justify-end p-[5vw] pt-[10vh]'>
+
+          <TextPressure
+    text="All About Me!"
+    flex
+    alpha={false}
+    stroke
+    width
+    weight
+    italic
+    textColor="#ffffff"
+    strokeColor="#5227FF"
+    minFontSize={36}
+  />
+  {  show &&        <MagicBento 
   textAutoHide={true}
   enableStars
   enableSpotlight
@@ -59,7 +74,7 @@ const socialItems = [
   particleCount={12}
   glowColor="132, 0, 255"
   disableAnimations={false}
-/>
+/>}
 
        </div>
          

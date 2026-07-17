@@ -21,9 +21,9 @@ const cardData = [
   },
   {
     color: '#120F17',
-    title: 'Collaboration',
-    description: 'Work together seamlessly',
-    label: 'Teamwork'
+    title: 'Ashutosh Ulape',
+    description: 'loves to learn & build something new everyday',
+    label: 'ME'
   },
   {
     color: '#120F17',
@@ -38,6 +38,7 @@ const cardData = [
     label: 'Connectivity'
   },
   {
+    background:'https://imgs.search.brave.com/ibK5t1vfrErVjwSHgGccjGC8rwNND_6LZXYT4UTduJM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wcmV2/aWV3LnJlZGQuaXQv/ZHJvcC15b3VyLWJl/c3QtcmRyLXNjcmVl/bnNob3RzLXYwLWh0/am1xdHBzZGJ6ZjEu/anBlZz93aWR0aD00/MzIwJmZvcm1hdD1w/anBnJmF1dG89d2Vi/cCZzPWNhY2U3OWM2/OThiY2IzNWQ4Zjg5/YWViYzkxMjg5NDc2/ODkzODU2NGE',
     color: '#120F17',
     title: 'Video games',
     description: 'Love to play games, specially Story modes ',
@@ -627,11 +628,12 @@ const MagicBento = ({
       <BentoCardGrid gridRef={gridRef}>
         <div className="card-responsive grid gap-2">
           {cardData.map((card, index) => {
-            const baseClassName = `card flex flex-col justify-between relative aspect-[4/3] min-h-[200px] w-full max-w-full p-5 rounded-[20px] border border-solid font-light overflow-hidden transition-colors duration-300 ease-in-out hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgba(0,0,0,0.15)] ${
+            const baseClassName = `card flex flex-col justify-between relative aspect-[4/3] min-h-[200px] w-full max-w-full  rounded-[20px] border border-solid font-light overflow-hidden transition-colors duration-300 ease-in-out hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgba(0,0,0,0.15)] ${
               enableBorderGlow ? 'card--border-glow' : ''
             }`;
 
             const cardStyle = {
+              
               backgroundColor: card.color || 'var(--background-dark)',
               borderColor: 'var(--border-color)',
               color: 'var(--white)',
@@ -653,8 +655,11 @@ const MagicBento = ({
                   enableTilt={enableTilt}
                   clickEffect={clickEffect}
                   enableMagnetism={enableMagnetism}>
+                  <img className='w-full absolute opacity-50 h-full ' src={card.background} alt="" />
+
+                  <div className='p-5 flex justify-between flex-col h-full'>
                   <div className="card__header flex justify-between gap-3 relative text-white">
-                    <span className="card__label text-base">{card.label}</span>
+                    <span className="card__label text-end w-full text-base">{card.label}</span>
                   </div>
                   <div className="card__content flex flex-col relative text-white">
                     <h3
@@ -665,6 +670,8 @@ const MagicBento = ({
                       className={`card__description text-xs leading-5 opacity-90 ${textAutoHide ? 'text-clamp-2' : ''}`}>
                       {card.description}
                     </p>
+                  </div>
+
                   </div>
                 </ParticleCard>
               );
