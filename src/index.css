@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
@@ -5,15 +6,15 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@theme inline {
-    --font-sans: 'Geist', sans-serif;
-     --font-pixel-square: var(--font-geist-pixel-square);
+@theme  {
+    
+  --font-pixel-square: var(--font-geist-pixel-square);
   --font-pixel-grid: var(--font-geist-pixel-grid);
   --font-pixel-circle: var(--font-geist-pixel-circle);
   --font-pixel-triangle: var(--font-geist-pixel-triangle);
-  --font-pixel-line: var(--font-geist-pixel-line);
-  --font-pixel-square: var(--font-geist-pixel-square);
-    --font-heading: var(--font-sans);
+  --font-pixel-line: var(--font-geist-pixel-line); 
+
+    
     --font-mono: 'JetBrains Mono Variable', monospace;
     --color-sidebar-ring: var(--sidebar-ring);
     --color-sidebar-border: var(--sidebar-border);
@@ -144,4 +145,13 @@
     @apply font-sans;
     font-family: 'Geist', sans-serif;
     }
+}
+
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
 }

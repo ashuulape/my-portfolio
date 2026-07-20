@@ -2,13 +2,15 @@ import React from 'react'
 import { motion } from 'motion/react'
 
 
-export const Slide = () => {
+export const Slide = ({color='bg-red-500'}) => {
 
 const delay=[2,2.2,2.4,2.6,2.8]
 
 
 
   return (
+
+    <div className="absolute w-full z-999 pointer-events-none">
     <div className='flex relative h-screen overflow-clip'>
 
         <div className='absolute w-full z-20 flex'>
@@ -33,7 +35,7 @@ const delay=[2,2.2,2.4,2.6,2.8]
                         {
                   delay.map((e)=>{
                     return <motion.div
-                className='bg-red-500 h-screen w-[20vw]'
+                className={`${color} h-screen w-[20vw]`}
                 animate={{
                   y:[0,500,1000]
                 }}
@@ -50,6 +52,7 @@ const delay=[2,2.2,2.4,2.6,2.8]
         </div>
      
     
+    </div>
     </div>
   )
 }

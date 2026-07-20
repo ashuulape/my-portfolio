@@ -7,7 +7,7 @@ const item=[
   { label: 'About', ariaLabel: 'Learn about us', link: '/about' },
   { label: 'Projects', ariaLabel: 'View my projects', link: '/projects' },
   { label: 'Contact', ariaLabel: 'Get in touch', link: '/contact' },
-  { label: 'Somethng Intresting', ariaLabel: 'Get in touch', link: '/Infinity' }
+  { label: 'Infinity', ariaLabel: 'Get in touch', link: '/Infinity' }
 ];
 
 export const StaggeredMenu = ({
@@ -408,7 +408,7 @@ export const StaggeredMenu = ({
 
           <button
             ref={toggleBtnRef}
-            className="sm-toggle relative inline-flex items-center gap-[0.3rem] bg-transparent border-0 cursor-pointer text-[#e9e9ef] font-medium leading-none overflow-visible pointer-events-auto"
+            className="sm-toggle relative inline-flex items-center gap-[0.4rem] bg-transparent border-0 cursor-pointer text-[#e9e9ef] font-medium leading-none overflow-visible pointer-events-auto"
             aria-label={open ? 'Close menu' : 'Open menu'}
             aria-expanded={open}
             aria-controls="staggered-menu-panel"
@@ -446,7 +446,7 @@ export const StaggeredMenu = ({
         <aside
           id="staggered-menu-panel"
           ref={panelRef}
-          className="staggered-menu-panel absolute top-0 right-0 h-full bg-white flex flex-col p-[6em_2em_2em_2em] overflow-y-auto z-10 backdrop-blur-[12px] pointer-events-auto"
+          className="staggered-menu-panel w-fit absolute top-0 right-0 h-full bg-white flex flex-col p-[6em_2em_2em_2em] overflow-y-auto z-10 backdrop-blur-[12px] pointer-events-auto"
           style={{ WebkitBackdropFilter: 'blur(12px)' }}
           aria-hidden={!open}>
           <div className="sm-panel-inner flex-1 flex flex-col gap-5">

@@ -49,10 +49,10 @@ export default function Lanyard({
   return (
     
 
-    <div className="fixed z-100 w-full h-screen flex justify-end items-end transform scale-100 ">
+    <div className="absolute z-100 w-full h-screen flex justify-end items-end transform scale-100 ">
       <Canvas
         camera={{ position: position, fov: fov }}
-        dpr={[1, isMobile ? 1 : 2]}
+        dpr={[1, isMobile ? 4 : 2]}
         gl={{ alpha: transparent }}
         onCreated={({ gl }) => gl.setClearColor(new THREE.Color(0x000000), transparent ? 0 : 1)}
       >
@@ -293,7 +293,7 @@ console.log(size);
         <meshLineMaterial
           color="white"
           depthTest={false}
-          resolution={isMobile ? [1000, 2000] : [1000, 1000]}
+          resolution={isMobile ? [1000, 1000] : [1000, 1000]}
           useMap
           map={texture}
           repeat={[-4, 1]}

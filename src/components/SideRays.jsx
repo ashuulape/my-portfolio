@@ -211,7 +211,7 @@ void main() {
             const loseCtx = renderer.gl.getExtension('WEBGL_lose_context');
             if (loseCtx) loseCtx.loseContext();
             const canvas = renderer.gl.canvas;
-            if (canvas && canvas.parentNode) canvas.parentNode.removeChild(canvas);
+            if (canvas && canvas.parentNode) canvas.parentNode.removeChild(as);
           } catch (e) {}
         }
         rendererRef.current = null;
