@@ -89,8 +89,8 @@ const Home = () => {
         />
       </div>
 
-      <div className="h-[100dvh] w-screen flex flex-col justify-between text-white">
-        <div className="h-[80dvh]  relative w-full flex items-center   pt-12  text-white z-10  pointer-events-none">
+      <div className="h-[100dvh] w-full flex flex-col justify-end text-white">
+        <div className="h-full  absolute  w-full flex items-center   pt-12  text-white z-10  pointer-events-none z-10">
           <Lanyard position={[5, 0, 20]} gravity={[0, -40, 0]} />
           <div className="h-1/2 w-1/2  flex flex-col items-start justify-center pl-[5vw] ">
             <h1 className=" flex items-center gap-1 text-3xl font-pixel-grid font-bold">
@@ -109,9 +109,6 @@ const Home = () => {
           </div>
         </div>
 
-        <h2 className="w-full text-center mb-[-6vh] tracking-widest ">
-          SKILLS & TOOLS
-        </h2>
         <LogoSlide />
       </div>
     </div>

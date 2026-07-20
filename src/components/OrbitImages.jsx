@@ -130,7 +130,7 @@ export default function OrbitImages({
   easing = "linear",
   paused = false,
   centerContent,
-  responsive = false,
+  responsive = true,
 }) {
   const containerRef = useRef(null);
   const [scale, setScale] = useState(null);
@@ -273,8 +273,8 @@ export default function OrbitImages({
           responsive ? "absolute left-1/2 top-1/2" : "relative w-full h-full"
         }
         style={{
-          width: responsive ? baseWidth : "100%",
-          height: responsive ? baseWidth : "100%",
+          width: responsive ? baseWidth : "fit-content",
+          height: responsive ? baseWidth : "fit-content",
           transform:
             responsive && scale !== null
               ? `translate(-50%, -50%) scale(${scale})`
