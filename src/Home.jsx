@@ -10,6 +10,8 @@ import logo from "./assets/mask.png";
 import { LogoSlide } from "./components/LogoSlide";
 import { motion } from "framer-motion";
 import SplitText from "./components/SplitText";
+import SpecularButton from "./components/SpecularButton";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const [text, settext] = useState(true);
@@ -25,7 +27,7 @@ const Home = () => {
     { label: "GitHub", link: "https://github.com" },
     { label: "LinkedIn", link: "https://linkedin.com" },
   ];
-
+  const navigate = useNavigate();
   return (
     <div>
       <Slide />
@@ -36,7 +38,7 @@ const Home = () => {
             opacity: [0],
           }}
           transition={{ duration: 0.8, delay: 1.5 }}
-          className="absolute flex w-full h-[100dvh] z-99999 text-center items-center justify-center"
+          className="absolute flex w-full full-height z-99999 text-center items-center justify-center"
         >
           <SplitText
             text="Home"
@@ -54,8 +56,8 @@ const Home = () => {
         </motion.div>
       )}
 
-      <div className="fixed h-full w-full pointer-events-none z-0  ">
-        <div className="absolute h-full w-full ">
+      <div className="fixed full-height w-full pointer-events-none z-0  ">
+        <div className="absolute full-height w-full ">
           <ColorBends colors={["#b96fff"]} />
         </div>
         <DotField
@@ -71,7 +73,7 @@ const Home = () => {
         />
       </div>
 
-      <div className="h-screen w-screen absolute pointer-events-none">
+      <div className="full-height w-screen absolute pointer-events-none">
         <StaggeredMenu
           position="left"
           socialItems={socialItems}
@@ -89,23 +91,55 @@ const Home = () => {
         />
       </div>
 
-      <div className="h-[100dvh] w-full flex flex-col justify-end text-white">
-        <div className="h-full  absolute  w-full flex items-center   pt-12  text-white z-10  pointer-events-none z-10">
+      <div className="full-height  w-full flex flex-col justify-end text-white overflow-clip">
+        <div className="full-height absolute w-full flex items-center pt-12 text-white pointer-events-none z-10">
           <Lanyard position={[5, 0, 20]} gravity={[0, -40, 0]} />
-          <div className="h-1/2 w-1/2  flex flex-col items-start justify-center pl-[5vw] ">
-            <h1 className=" flex items-center gap-1 text-3xl font-pixel-grid font-bold">
+          <div className="h-[70%] sm:h-1/2 w-[90%] sm:w-[80%] md:w-1/2 flex flex-col items-start md:justify-center justify-items-start pl-[5vw] pb-[10vh] md:pb-0 z-2">
+            <h1 className="flex flex-wrap items-center gap-1 text-2xl md:text-3xl font-pixel-grid font-bold">
               Be,
               <RotatingText
-                texts={["Creative", "Passinate", "Cool!"]}
+                texts={["Creative", "Passionate", "Cool!"]}
                 mainClassName=" w-fit text-white px-2 sm:px-2 md:px-3 bg-[#7463F8] text-black overflow-hidden py-0.5 sm:py-1 md:py-0.5 justify-center rounded-lg"
               />
             </h1>{" "}
             <br />
-            <h2 className="text-3xl">Hi! I'm Ashutosh.</h2>
-            <h3 className="text-[2vh] text-white/50">
+            <h2 className="text-2xl md:text-3xl mt-[-1rem] md:mt-0">
+              Hi! I'm Ashutosh.
+            </h2>
+            <h3 className="text-sm md:text-[2vh] text-white/50 mt-1 md:mt-0">
               {" "}
               A creative Frontend Developer who knows some sort of Backend also
             </h3>
+            <br />
+            <SpecularButton
+              size="sm"
+              radius={7}
+              tint="#5c00f9"
+              tintOpacity={0.12}
+              blur={0}
+              textColor="#8755F1"
+              lineColor="#f2a9a9"
+              baseColor="#7C3AED"
+              intensity={0.8}
+              shineSize={10}
+              shineFade={40}
+              thickness={1}
+              speed={0.9}
+              followMouse
+              proximity={190}
+              autoAnimate={false}
+              onClick={"/about"}
+              className="flex flex-col"
+            >
+              <h1 className="flex gap-2">
+                About me
+                <img
+                  src="https://img.icons8.com/?size=100&id=39969&format=png&color=8755F1"
+                  className="cover h-4"
+                  alt=""
+                />
+              </h1>
+            </SpecularButton>
           </div>
         </div>
 

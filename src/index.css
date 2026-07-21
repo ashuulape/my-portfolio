@@ -155,3 +155,7 @@ html {
 html::-webkit-scrollbar {
   display: none;
 }
+
+.full-height {
+  height: calc(var(--vh, 1vh) * 100);
+}

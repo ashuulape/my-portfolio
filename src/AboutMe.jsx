@@ -52,7 +52,7 @@ const AboutMe = () => {
   return (
     <div
       ref={boxRef}
-      className="h-screen overflow-clip  w-full relative bg-black pointer-events-none z-10 "
+      className="full-height overflow-clip  w-full relative bg-black pointer-events-none z-10 "
     >
       <Slide color={"bg-[#ff69b4]"} />
 

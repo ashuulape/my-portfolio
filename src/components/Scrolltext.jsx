@@ -38,7 +38,7 @@ const Scrolltext = () => {
       scrollTrigger: {
         trigger: "#maintext",
         start: "top bottom",
-        end: window.outerWidth < 768 ? "top 60%" : "top 40%",
+        end: window.outerWidth < 768 ? "top 60%" : "top 20%",
         scrub: 1,
       },
     });
@@ -125,7 +125,7 @@ const Scrolltext = () => {
         <div
           ref={imagedivRef}
           id="imgdiv"
-          className="w-full h-full flex-1 relative"
+          className="w-full h-full flex-1 relative z-0"
         >
           <OrbitImages
             images={images}
