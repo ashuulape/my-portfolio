@@ -26,6 +26,7 @@ export const StaggeredMenu = ({
   closeOnClickAway = true,
   onMenuOpen,
   onMenuClose,
+  transitionfun,
 }) => {
   const [open, setOpen] = useState(false);
   const openRef = useRef(false);
@@ -525,7 +526,9 @@ export const StaggeredMenu = ({
                   >
                     <a
                       className="sm-panel-item relative text-black font-semibold text-[4rem] cursor-pointer leading-none tracking-[-2px] uppercase transition-[background,color] duration-150 ease-linear inline-block no-underline pr-[1.4em]"
-                      href={it.link}
+                      onClick={() => {
+                        transitionfun(it.link);
+                      }}
                       aria-label={it.ariaLabel}
                       data-index={idx + 1}
                     >

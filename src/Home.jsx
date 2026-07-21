@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Slide } from "./Slide";
 
 import Lanyard from "./components/Lanyard";
@@ -15,6 +15,11 @@ import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const [text, settext] = useState(true);
+  const slideRef = useRef(null);
+
+  const handleClick = (props) => {
+    slideRef.current.transition(props);
+  };
 
   useEffect(() => {
     const time = setTimeout(() => settext(false), 2000);
@@ -30,7 +35,7 @@ const Home = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <Slide />
+      <Slide ref={slideRef} />
 
       {text && (
         <motion.div
@@ -88,6 +93,7 @@ const Home = () => {
           onMenuOpen={() => console.log("Menu opened")}
           onMenuClose={() => console.log("Menu closed")}
           className={"absolute"}
+          transitionfun={handleClick}
         />
       </div>
 
@@ -117,9 +123,9 @@ const Home = () => {
               tint="#5c00f9"
               tintOpacity={0.12}
               blur={0}
-              textColor="#8755F1"
+              textColor="#D7CFFF"
               lineColor="#f2a9a9"
-              baseColor="#7C3AED"
+              baseColor="#8755F1"
               intensity={0.8}
               shineSize={10}
               shineFade={40}
@@ -128,13 +134,13 @@ const Home = () => {
               followMouse
               proximity={190}
               autoAnimate={false}
-              onClick={"/about"}
+              onClick={() => handleClick("about")}
               className="flex flex-col"
             >
               <h1 className="flex gap-2">
                 About me
                 <img
-                  src="https://img.icons8.com/?size=100&id=39969&format=png&color=8755F1"
+                  src="https://img.icons8.com/?size=100&id=39969&format=png&color=D7CFFF"
                   className="cover h-4"
                   alt=""
                 />
@@ -142,7 +148,6 @@ const Home = () => {
             </SpecularButton>
           </div>
         </div>
-
         <LogoSlide />
       </div>
     </div>
