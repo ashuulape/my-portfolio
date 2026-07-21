@@ -12,6 +12,13 @@ import { motion } from "motion/react";
 import Scrolltext from "./components/Scrolltext";
 
 const AboutMe = () => {
+  const slideRef = useRef(null);
+
+  const handleClick = (link, label) => {
+    if (label !== "About") {
+      slideRef.current.transition(link);
+    }
+  };
   const [show, setShow] = useState(false);
   const [text, settext] = useState(true);
   const boxRef = useRef(null);
@@ -36,13 +43,6 @@ const AboutMe = () => {
     }
   }, [show]);
 
-  const menuItems = [
-    { label: "Home", ariaLabel: "Go to home page", link: "/" },
-    { label: "About", ariaLabel: "Learn about us", link: "/about" },
-    { label: "Projects", ariaLabel: "View my projects", link: "/projects" },
-    { label: "Contact", ariaLabel: "Get in touch", link: "/contact" },
-  ];
-
   const socialItems = [
     { label: "Twitter", link: "https://twitter.com" },
     { label: "GitHub", link: "https://github.com" },
@@ -54,12 +54,12 @@ const AboutMe = () => {
       ref={boxRef}
       className="full-height overflow-clip  w-full relative bg-black pointer-events-none z-10 "
     >
-      <Slide color={"bg-[#ff69b4]"} />
+      <Slide color={"bg-[#ff69b4]"} ref={slideRef} />
 
       {text && (
         <motion.div
           animate={{
-            opacity: [1, 0],
+            opacity: 0,
           }}
           transition={{ duration: 0.8, delay: 1.5 }}
           className="absolute flex w-full h-[100dvh] z-99999 text-center items-center justify-center"
@@ -68,10 +68,10 @@ const AboutMe = () => {
             text="About Me"
             className="text-5xl font-semibold text-center text-black "
             delay={50}
-            duration={1.25}
+            duration={1.8}
             ease="power3.out"
             splitType="chars"
-            from={{ opacity: 0, y: 40 }}
+            from={{ opacity: 1, y: 60 }}
             to={{ opacity: 1, y: 0 }}
             threshold={0.1}
             rootMargin="-100px"
@@ -118,6 +118,7 @@ const AboutMe = () => {
           onMenuOpen={() => console.log("Menu opened")}
           onMenuClose={() => console.log("Menu closed")}
           className={"absolute"}
+          transitionfun={handleClick}
         />
       </div>
       <div className="w-full h-fit pt-[10vh]">

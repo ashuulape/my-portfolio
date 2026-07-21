@@ -17,8 +17,11 @@ const Home = () => {
   const [text, settext] = useState(true);
   const slideRef = useRef(null);
 
-  const handleClick = (props) => {
-    slideRef.current.transition(props);
+  const handleClick = (link, label) => {
+    console.log(label);
+    if (label !== "Home") {
+      slideRef.current.transition(link);
+    }
   };
 
   useEffect(() => {
