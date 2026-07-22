@@ -3,7 +3,10 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 @import "@fontsource-variable/jetbrains-mono";
-
+@font-face {
+  font-family: 'Akira';
+  src: url(fonts/Akira\ Expanded\ Demo.otf);
+}
 @custom-variant dark (&:is(.dark *));
 
 @theme  {

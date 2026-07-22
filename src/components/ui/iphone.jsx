@@ -20,7 +20,7 @@ export function Iphone({ src, videoSrc, className, style, ...props }) {
 
   return (
     <div
-      className={`absolute md:right-0 right-[50%]  md:translate-[1vw] translate-y-[8vw] translate-x-[5vw] inline-block md:h-[8vw] h-[22vw] align-middle leading-none ${className}`}
+      className={` inline-block align-middle leading-none ${className}`}
       style={{
         aspectRatio: `${PHONE_WIDTH}/${PHONE_HEIGHT}`,
         ...style,

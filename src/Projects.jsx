@@ -34,7 +34,7 @@ const Projects = () => {
   ];
 
   return (
-    <section className="h-[100dvh] w-[100dvw] text-10 text-red-500 relative bg-black">
+    <section className="h-[100dvh] w-[100dvw]  text-10 text-red-500 relative bg-black">
       <Slide color={"bg-[#87ceeb]"} ref={slideRef} />
       {text && (
         <motion.div

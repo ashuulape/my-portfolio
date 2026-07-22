@@ -65,7 +65,12 @@ const HorizontalScroll = ({ scrollObj }) => {
               <h1 className="text-white font-thin md:text-[0.4vw] text-[0.5vw] absolute w-full text-center">
                 {obj?.title}
               </h1>
-              <Iphone src={obj.mobileImg} />
+              <Iphone
+                src={obj.mobileImg}
+                className={
+                  "absolute md:right-0 right-[50%]  md:translate-[1vw] translate-y-[8vw] translate-x-[5vw] md:h-[8vw] h-[22vw] "
+                }
+              />
             </div>
           );
         })}
