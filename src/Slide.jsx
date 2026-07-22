@@ -39,7 +39,7 @@ export const Slide = forwardRef(({ color = "bg-red-500" }, ref) => {
   }));
 
   return (
-    <div className="absolute w-full z-999 pointer-events-none">
+    <div className="absolute full-height full-width z-999 pointer-events-none">
       <div className="flex relative full-height overflow-clip">
         <div
           id="maindiv1"

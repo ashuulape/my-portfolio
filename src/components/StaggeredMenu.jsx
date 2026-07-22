@@ -1,5 +1,6 @@
 import React, { useCallback, useLayoutEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
+import logo from "../assets/mask.png";
 
 const item = [
   { label: "Home", ariaLabel: "Go to home page", link: "/" },
@@ -9,15 +10,21 @@ const item = [
   { label: "Infinity", ariaLabel: "Get in touch", link: "/Infinity" },
 ];
 
+const socialItem = [
+  { label: "Twitter", link: "https://twitter.com" },
+  { label: "GitHub", link: "https://github.com" },
+  { label: "LinkedIn", link: "https://linkedin.com" },
+];
+
 export const StaggeredMenu = ({
-  position = "right",
+  position = "left",
   colors = ["#B497CF", "#5227FF"],
   items = item,
-  socialItems = [],
+  socialItems = socialItem,
   displaySocials = true,
   displayItemNumbering = true,
   className,
-  logoUrl = "/src/assets/logos/reactbits-gh-white.svg",
+  logoUrl = logo,
   menuButtonColor = "#fff",
   openMenuButtonColor = "#fff",
   changeMenuColorOnOpen = true,

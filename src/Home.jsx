@@ -30,11 +30,6 @@ const Home = () => {
     return () => clearTimeout(time);
   }, []);
 
-  const socialItems = [
-    { label: "Twitter", link: "https://twitter.com" },
-    { label: "GitHub", link: "https://github.com" },
-    { label: "LinkedIn", link: "https://linkedin.com" },
-  ];
   const navigate = useNavigate();
   return (
     <div>
@@ -84,7 +79,6 @@ const Home = () => {
       <div className="full-height w-screen absolute pointer-events-none">
         <StaggeredMenu
           position="left"
-          socialItems={socialItems}
           displaySocials
           displayItemNumbering={true}
           menuButtonColor="#ffffff"
