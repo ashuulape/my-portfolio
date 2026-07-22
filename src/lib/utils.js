@@ -1,6 +1,19 @@
-import { clsx } from "clsx";
-import { twMerge } from "tailwind-merge"
+const { useState, useEffect } = require("react");
 
-export function cn(...inputs) {
-  return twMerge(clsx(inputs));
+export default function useMousePosition(){
+  const [mouesPosition, setmouesPosition] = useState({x:0 ,y:0})
+
+
+    const update=(e)=>{
+        setmouesPosition({x:e.clientX , y:e.clientY})
+    }
+
+
+    useEffect(()=>{
+      window.addEventListener('mousemove',update)
+      return ()=>{
+        window.removeEventListener('mousemove',update)
+      }
+    })
+  
 }

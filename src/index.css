@@ -162,3 +162,13 @@ html::-webkit-scrollbar {
 .full-width {
   width: calc(var(--vw, 1vw) * 100);
 }
+.laptop{
+aspect-ratio: 16 / 9; /* aspect-[16/9] */
+  opacity: 0; /* opacity-0 */
+  flex-shrink: 0; /* shrink-0 */
+  background-size: cover; /* bg-cover */
+  background-position: center; /* bg-center */
+  background-repeat: no-repeat; /* bg-no-repeat */
+  position: relative;
+  border-radius: 2px;
+}
