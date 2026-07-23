@@ -146,12 +146,12 @@
 }
 
 @layer base {
-  /* * {
+  * {
     @apply border-border outline-ring/50;
     }
   body {
     @apply bg-background text-foreground;
-    } */
+    }
   html {
     @apply font-sans;
     font-family: 'Geist', sans-serif;
@@ -182,4 +182,7 @@ aspect-ratio: 16 / 9; /* aspect-[16/9] */
   background-repeat: no-repeat; /* bg-no-repeat */
   position: relative;
   border-radius: 2px;
+}
+#root{
+  width:100%;
 }

@@ -421,7 +421,7 @@ const LightPillar = ({
   return (
     <div
       ref={containerRef}
-      className={`w-full h-full fixed z-10 top-0 left-0 ${className}`}
+      className={`w-full h-full fixed z-[0] top-0 left-0 ${className}`}
       style={{ mixBlendMode }}
     />
   );

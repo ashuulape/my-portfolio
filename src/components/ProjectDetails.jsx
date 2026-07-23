@@ -75,24 +75,24 @@ const ProjectDetails = () => {
             className={`infodiv mt-10 md:h-[80vh] h-[50vh] w-[80vw]  rounded-2xl bg-white border-2 border-[#87ceeb] md:px-10 py-1 px-2 overflow-hidden`}
             style={{ position: "sticky", top: "10vh" }}
           >
-            <h1 className="headline opacity-100 font-[Schabo] absolute   md:bottom-0 text-black w-full  text-start md:text-[8vw] text-[14vw] ">
+            <h1 className="headline opacity-100 font-[Schabo] absolute sm:bottom-0  md:bottom-0 text-black w-full  text-start md:text-[8vw] text-[14vw] ">
               UBER ClONE
             </h1>
             <Iphone
               className={
-                "iphone absolute md:right-20 right-0 bottom-0 md:h-160 h-60"
+                "iphone absolute md:right-20 right-0 bottom-0 sm:h-80 md:h-160 h-60"
               }
             />
             <div className=" flex  flex-row w-full h-full rounded-2xl  ">
-              <div className=" md:flex-3 flex-[4] rounded-2xl flex items-end md:items-start lg:items-center py-10">
-                <p className="w-[35vw] paragraph popins font-bold text-gray-900 text-[2.5vw] md:text-2xl ">
+              <div className=" md:flex-3 flex-[4] rounded-2xl flex items-end sm:items-start md:items-start lg:items-center py-10">
+                <p className="w-[35vw] paragraph popins font-bold text-gray-900 text-[10px] sm:text-[12px] md:text-2xl ">
                   A full-stack ride-hailing platform built with MongoDB,
                   Express, React, and Node.js, featuring real-time ride matching
                   and live location tracking.
                   <ul>
                     {features.map((e) => {
                       return (
-                        <li className="mt-1 font-light text-[2vw] md:text-lg">
+                        <li className="mt-1 font-light  sm:text-[12px] md:text-lg text-[8px]">
                           * {e}
                         </li>
                       );

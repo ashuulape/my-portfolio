@@ -16,7 +16,7 @@ const DotField = memo(
     gradientFrom = "rgba(168, 85, 247, 0.35)",
     gradientTo = "rgba(180, 151, 207, 0.25)",
     glowColor = "#120F17",
-    ...rest
+    className,
   }) => {
     const canvasRef = useRef(null);
     const svgRef = useRef(null);
@@ -257,7 +257,7 @@ const DotField = memo(
     }, [dotRadius, dotSpacing]);
 
     return (
-      <div className="w-full full-height absolute" {...rest}>
+      <div className={`w-full full-height  ${className}`}>
         <canvas
           ref={canvasRef}
           style={{

@@ -3,16 +3,13 @@ import { Slide } from "./Slide";
 import { motion } from "framer-motion";
 import SplitText from "./components/SplitText";
 import StaggeredMenu from "./components/StaggeredMenu";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
-import { Iphone } from "./components/ui/iphone";
 import portPc from "./assets/portPc.png";
 import portMobile from "./assets/portMobile.png";
 import HorizontalScroll from "./components/HorizontalScroll";
 import ProjectDetails from "./components/ProjectDetails";
 import ProjectFooter from "./components/ProjectFooter";
 import LightPillar from "./components/LightPillar";
+import DotField from "./components/DotField";
 
 const Projects = () => {
   const slideRef = useRef();
@@ -36,7 +33,7 @@ const Projects = () => {
   ];
 
   return (
-    <section className="h-[100dvh] w-[100dvw]  text-10 bg-transparent relative">
+    <div className="min-h-dvh w-full text-10 bg-transparent relative overflow-clip">
       <Slide color={"bg-[#87ceeb]"} ref={slideRef} />
 
       <LightPillar
@@ -44,21 +41,23 @@ const Projects = () => {
         bottomColor="#154C63"
         intensity={1}
         rotationSpeed={0.3}
-        glowAmount={0.002}
-        pillarWidth={3}
+        glowAmount={0.003}
+        pillarWidth={4.3}
         pillarHeight={0.4}
         noiseIntensity={0.5}
-        pillarRotation={25}
+        pillarRotation={60}
         interactive={false}
-        mixBlendMode="screen"
+        mixBlendMode="normal"
         quality="high"
       />
+
+      <DotField className={"fixed z-0"} />
 
       {text && (
         <motion.div
           animate={{ opacity: [0, 1, 0] }}
           transition={{ duration: 0.8, delay: 1.5 }}
-          className="fixed flex w-full h-[100dvh] z-99999 text-center items-center justify-center"
+          className="fixed flex w-[100svw] h-[100dvh] z-99999 text-center items-center justify-center"
         >
           <SplitText
             text="Projects"
@@ -71,7 +70,7 @@ const Projects = () => {
       <HorizontalScroll scrollObj={scrollObj} />
       <ProjectDetails />
       <ProjectFooter />
-    </section>
+    </div>
   );
 };
 
