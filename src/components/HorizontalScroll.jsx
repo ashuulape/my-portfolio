@@ -9,7 +9,7 @@ const HorizontalScroll = ({ scrollObj }) => {
   useGSAP(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: "#section",
+        trigger: ".section",
         start: "top top",
         end: () => (window.innerWidth < 768 ? "bottom top" : "bottom bottom"),
         scrub: 1,
@@ -40,13 +40,12 @@ const HorizontalScroll = ({ scrollObj }) => {
 
   return (
     <section
-      id="section"
-      className="w-[100dvw]  px-10 md:h-[300vw] h-[300vh] relative overflow-clip text-white bg-black
+      className="w-[100dvw] section px-10 md:h-[300vw] h-fit relative overflow-clip text-white 
              "
     >
       <div
         id="projects"
-        className="relative flex flex-row gap-[2vw] items-center full-height w-max  sticky top-0 bottom-0 z-10 "
+        className="relative flex flex-row gap-[2vw] items-center h-[100dvh] md:full-height w-max  sticky top-0 bottom-0 z-10 "
       >
         <h2 className="absolute w-full text-[1.5vw] text-center font-thin md:translate-x-4">
           scroll {`▻`}
@@ -75,6 +74,8 @@ const HorizontalScroll = ({ scrollObj }) => {
           );
         })}
       </div>
+
+      <div className="h-[300vh]"></div>
     </section>
   );
 };

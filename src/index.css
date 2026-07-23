@@ -7,6 +7,14 @@
   font-family: 'Akira';
   src: url(fonts/Akira\ Expanded\ Demo.otf);
 }
+@font-face {
+  font-family: 'Schabo';
+  src: url(fonts/SCHABO-Condensed.otf);
+}
+@font-face {
+  font-family: 'Galano';
+  src: url(fonts/GalanoGrotesqueRegular.otf);
+}
 @custom-variant dark (&:is(.dark *));
 
 @theme  {
@@ -138,12 +146,12 @@
 }
 
 @layer base {
-  * {
+  /* * {
     @apply border-border outline-ring/50;
     }
   body {
     @apply bg-background text-foreground;
-    }
+    } */
   html {
     @apply font-sans;
     font-family: 'Geist', sans-serif;
