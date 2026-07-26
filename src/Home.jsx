@@ -33,7 +33,7 @@ const Home = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <Slide ref={slideRef} />
+      <Slide ref={slideRef} color={"bg-[#7463F8]"} />
 
       {text && (
         <motion.div

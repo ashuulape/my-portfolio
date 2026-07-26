@@ -63,7 +63,7 @@ export function Iphone({ src, videoSrc, className, style, ...props }) {
           <img
             src={src}
             alt=""
-            className="block size-full object-cover object-top"
+            className="block size-full object-cover scale-100 "
           />
         </div>
       )}

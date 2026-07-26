@@ -8,12 +8,19 @@ import React, {
   useRef,
 } from "react";
 import gsap from "gsap";
+import MDB from "../assets/projectImg/MDB.png";
 
-export const Card = forwardRef(({ customClass, ...rest }, ref) => (
+export const Card = forwardRef(({ image, customClass, ...rest }, ref) => (
   <div
     ref={ref}
     {...rest}
-    className={`absolute  left-1/2  rounded-xl border border-white bg-black  [transform-style:preserve-3d] [will-change:transform] [backface-visibility:hidden] ${customClass ?? ""} ${rest.className ?? ""}`.trim()}
+    className={`absolute w-full h-full md:left-1/2 left-1 rounded-xl border border-white bg-black  [transform-style:preserve-3d] [will-change:transform] [backface-visibility:hidden] ${customClass ?? ""} ${rest.className ?? ""}`.trim()}
+    style={{
+      backgroundImage: `url(${image})`,
+      backgroundSize: "contain",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    }}
   />
 ));
 Card.displayName = "Card";
@@ -197,7 +204,7 @@ const CardSwap = ({
   return (
     <div
       ref={container}
-      className="absolute bottom-0 right-0 transform translate-x-[5%] translate-y-[20%] origin-bottom-right perspective-[900px] overflow-visible max-[768px]:translate-x-[25%] max-[768px]:translate-y-[25%] max-[768px]:scale-[0.75] max-[480px]:translate-x-[25%] max-[480px]:translate-y-[25%] max-[480px]:scale-[0.55]"
+      className="absolute w-fit h-fit bottom-0 right-0 transform translate-x-[5%] translate-y-[20%] origin-bottom-right perspective-[900px] overflow-visible max-[768px]:translate-x-[25%] max-[768px]:translate-y-[25%] max-[768px]:scale-[0.75] max-[480px]:translate-x-[25%] max-[480px]:translate-y-[25%] max-[480px]:scale-[0.55]"
       style={{ width, height }}
     >
       {rendered}

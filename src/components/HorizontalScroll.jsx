@@ -43,6 +43,14 @@ const HorizontalScroll = ({ scrollObj }) => {
       duration: 1,
     });
     tl.to(
+      ".tag",
+      {
+        opacity: 0,
+        duration: 1,
+      },
+      "<",
+    );
+    tl.to(
       ".image",
       {
         opacity: 1,
@@ -79,7 +87,7 @@ const HorizontalScroll = ({ scrollObj }) => {
           id="projects"
           className=" flex flex-row gap-[2vw] items-center h-full w-full"
         >
-          <h2 className="absolute  top-1/2 md:left-2/5 left-1/4 w-full text-xs md:text-[1.5vw] text-center font-thin">
+          <h2 className="absolute tag  top-1/2 md:left-2/5 left-1/4 w-full text-xs md:text-[1.5vw] text-center font-thin">
             scroll ▻
           </h2>
           <h1 className="text-[12vw] md:text-[15vw] flex justify-center flex-col font-black shrink-0">
@@ -88,15 +96,17 @@ const HorizontalScroll = ({ scrollObj }) => {
           {scrollObj.map((obj, index) => (
             <div
               key={index}
-              className="image md:h-[8vw] h-[22vw] laptop shrink-0"
+              className="image laptop md:h-[8vw] h-10 md:translate-0 -translate-y-8"
               style={{ backgroundImage: `url(${obj.bg})` }}
             >
-              <h1 className="text-white font-thin text-[10px] md:text-[0.4vw] absolute w-full text-center top-1">
+              <h1 className="text-white font-thin text-[10px] md:text-[0.4vw] absolute w-full text-center top-[-18px]">
                 {obj?.title}
               </h1>
               <Iphone
                 src={obj.mobileImg}
-                className="absolute right-0 bottom-0 md:translate-[1vw] md:h-[8vw] h-[20vw]"
+                className={
+                  "absolute md:right-0 right-[50%]  md:translate-[1vw] translate-y-8 translate-x-5 md:h-[8vw] h-20 "
+                }
               />
             </div>
           ))}

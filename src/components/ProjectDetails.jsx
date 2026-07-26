@@ -3,9 +3,10 @@ import gsap from "gsap";
 import { ScrollTrigger, SplitText } from "gsap/all";
 import React from "react";
 import { Iphone } from "./ui/iphone";
+import { resolveTransition } from "framer-motion";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
-const ProjectDetails = () => {
+const ProjectDetails = ({ obj }) => {
   const features = [
     "Real-time updates via Socket.IO for instant ride requests and status changes between riders and drivers",
     "Interactive maps with React-Leaflet, showing live driver/rider markers with optimized re-rendering",
@@ -65,22 +66,21 @@ const ProjectDetails = () => {
       ScrollTrigger.getAll().forEach((st) => st.kill());
     };
   });
-  const arr = ["10vh", "15vh", "20vh", "25vh"];
 
   return (
     <section className="maindiv h-fit py-20 px-10 flex flex-col md:gap-[30vh] gap-52 items-center relative ">
-      {arr.map(() => {
+      {obj.map((e) => {
         return (
           <div
-            className={`infodiv mt-10 md:h-[80vh] h-[50vh] w-[80vw]  rounded-2xl bg-white border-2 border-[#87ceeb] md:px-10 py-1 px-2 overflow-hidden`}
-            style={{ position: "sticky", top: "10vh" }}
+            className={`infodiv sticky top-[20vh] md:top-[10vh] mt-10 md:h-[80vh] h-[50vh] md:w-[80vw] w-[90vw] rounded-sm bg-white border-2 border-[#87ceeb] md:px-10 py-1 px-2 overflow-hidden`}
           >
             <h1 className="headline opacity-100 font-[Schabo] absolute sm:bottom-0  md:bottom-0 text-black w-full  text-start md:text-[8vw] text-[14vw] ">
-              UBER ClONE
+              {e.title}
             </h1>
             <Iphone
+              src={e.mobileImg}
               className={
-                "iphone absolute md:right-20 right-0 bottom-0 sm:h-80 md:h-160 h-60"
+                "iphone absolute md:right-20 right-1/9 bottom-0 sm:h-80  md:h-120 lg:h-160 xl:h-200 h-70"
               }
             />
             <div className=" flex  flex-row w-full h-full rounded-2xl  ">
@@ -100,7 +100,20 @@ const ProjectDetails = () => {
                   </ul>
                 </p>
               </div>
-              <div className="bg-blue-300 md:flex-1 flex-[2] rounded-2xl"></div>
+              <div className="bg-gray-600 w-2/5 md:flex-1 flex-[2] text-white px-2 py-4 rounded-2xl">
+                <h1 className="font-bold md:mb-3 mb-1 md:text-3xl text-2xl font-[akira] tracking-wider w-full text-center">
+                  Tech stack
+                </h1>
+                <ul className="flex md:flex-row flex-col w-full md:gap-4 gap-1 flex-wrap justify-center items-end ">
+                  {e.tech.map((e) => {
+                    return (
+                      <li className=" w-fit aspect-square md:text-4xl text-xl ">
+                        {e}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
             </div>
           </div>
         );

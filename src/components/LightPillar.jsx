@@ -6,7 +6,7 @@ const LightPillar = ({
   bottomColor = "#FF9FFC",
   intensity = 1.0,
   rotationSpeed = 0.3,
-  interactive = false,
+  interactive = true,
   className = "",
   glowAmount = 0.005,
   pillarWidth = 3.0,
@@ -421,7 +421,7 @@ const LightPillar = ({
   return (
     <div
       ref={containerRef}
-      className={`w-full h-full fixed z-[0] top-0 left-0 ${className}`}
+      className={`w-full h-full fixed z-[0] top-0 left-0 pointer-events-auto ${className}`}
       style={{ mixBlendMode }}
     />
   );
