@@ -102,7 +102,7 @@ const Scrolltext = () => {
         <div className="flex items-center justify-center flex-col w-full h-auto flex-1 gap-6 md:gap-10 ">
           <p
             ref={pararef}
-            className="text-sm sm:text-base md:text-lg lg:text-[1.2vw] font-[Galano] leading-relaxed"
+            className="text-sm sm:text-base md:text-lg lg:text-[1vw] font-[Galano] leading-relaxed"
           >
             I come from an electronics and computer background, but somewhere
             along the way, software pulled me in and hardware just couldn't
@@ -111,7 +111,7 @@ const Scrolltext = () => {
             something new a tool, a framework, a random project I saw online and
             then reverse-engineering it just to understand how it ticks.
           </p>
-          <p className="paratext text-sm sm:text-base md:text-lg lg:text-[1.2vw] font-[Galano] leading-relaxed">
+          <p className="paratext text-sm sm:text-base md:text-lg lg:text-[1vw] font-[Galano] ">
             I also carry a bit of a gamer's mindset into everything I do. In
             games, you don't move past a boss until you beat it no shortcuts, no
             skipping ahead. I apply that same mentality to life: if something

@@ -80,7 +80,7 @@ const ProjectDetails = ({ obj }) => {
             <Iphone
               src={e.mobileImg}
               className={
-                "iphone absolute md:right-20 right-1/9 bottom-0 sm:h-80  md:h-120 lg:h-160 xl:h-200 h-70"
+                "iphone absolute md:right-20 right-1/9 bottom-0 sm:h-90  md:h-120 lg:h-160 xl:h-200 h-70"
               }
             />
             <div className=" flex  flex-row w-full h-full rounded-2xl  ">
@@ -100,7 +100,7 @@ const ProjectDetails = ({ obj }) => {
                   </ul>
                 </p>
               </div>
-              <div className="bg-gray-600 w-2/5 md:flex-1 flex-[2] text-white px-2 py-4 rounded-2xl">
+              <div className="bg-gray-600 w-2/5 md:flex-1 flex-2 text-white px-2 py-4 rounded">
                 <h1 className="font-bold md:mb-3 mb-1 md:text-3xl text-2xl font-[akira] tracking-wider w-full text-center">
                   Tech stack
                 </h1>

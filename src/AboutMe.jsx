@@ -122,34 +122,40 @@ const AboutMe = () => {
         />
       </div>
       <div className="w-full h-fit pt-[10vh]">
-        <TextPressure
-          text="All About Me!"
-          flex
-          alpha={false}
-          stroke
-          width
-          weight
-          italic
-          textColor="#ffffff"
-          strokeColor="#5227FF"
-          minFontSize={30}
-        />
+        {window.outerWidth > 768 ? (
+          <TextPressure
+            text="All About Me!"
+            flex
+            alpha={false}
+            stroke
+            width
+            weight
+            italic
+            textColor="#ffffff"
+            strokeColor="#5227FF"
+            minFontSize={30}
+          />
+        ) : (
+          <h1 className="text-white font-[akira] w-full text-center text-[8vw] relative z-2">
+            ALL ABOUT ME!
+          </h1>
+        )}
       </div>
 
       {/* ...Slide, StaggeredMenu, TextPressure unchanged... */}
 
       <div className="flex flex-col gap-10 items-center ">
-        <div className="w-full h-full  p-[5vw] md-10vh pointer-events-auto ">
+        <div className="w-full h-full  md:p-[5vw] md-10vh pointer-events-auto ">
           <MagicBento
             textAutoHide={true}
             enableStars
             enableSpotlight
             enableBorderGlow={true}
             enableTilt={true}
-            enableMagnetism
+            enableMagnetism={true}
             clickEffect={true}
             spotlightRadius={370}
-            particleCount={12}
+            particleCount={20}
             glowColor="132, 0, 255"
             disableAnimations={false}
           />

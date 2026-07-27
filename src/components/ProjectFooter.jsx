@@ -30,8 +30,8 @@ const ProjectFooter = () => {
       height = 600;
       break;
     default: // 1200+
-      width = 1000;
-      height = 800;
+      width = 900;
+      height = 600;
       break;
   }
   console.log(window.outerWidth);

@@ -1,5 +1,9 @@
 import { useRef, useEffect, useState, useCallback } from "react";
 import { gsap } from "gsap";
+import ME from "../assets/me.jpg";
+import aboutGame from "../assets/aboutGame.png";
+import MERN from "../assets/MERN.png";
+import Edu from "../assets/Edu.png";
 
 const DEFAULT_PARTICLE_COUNT = 12;
 const DEFAULT_SPOTLIGHT_RADIUS = 300;
@@ -8,8 +12,8 @@ const MOBILE_BREAKPOINT = 768;
 
 const cardData = [
   {
-    background:
-      "https://imgs.search.brave.com/DzLVMAfdJkQtlfPlRzZJeV3o9WxlOpVZr4-xQX7k2So/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wbHVz/LnVuc3BsYXNoLmNv/bS9wcmVtaXVtX3Bo/b3RvLTE3MTQ2MTg5/NDYwMjEtOGZiZDYz/OTRkMWE4P2ZtPWpw/ZyZxPTYwJnc9MzAw/MCZhdXRvPWZvcm1h/dCZmaXQ9Y3JvcCZp/eGxpYj1yYi00LjEu/MCZpeGlkPU0zd3hN/akEzZkRCOE1IeHpa/V0Z5WTJoOE1YeDha/V3hsWTNSeWIyNXBZ/M01sTWpCcGJtUjFj/M1J5ZVh4bGJud3dm/SHd3Zkh4OE1BPT0",
+    background: Edu,
+
     color: "#120F17",
     title: "B-Tech",
     description: "in Electronics and Computer, 26",
@@ -22,7 +26,7 @@ const cardData = [
     label: "Overview",
   },
   {
-    background: "",
+    background: ME,
     color: "#120F17",
     title: "Ashutosh Ulape",
     description: "loves to learn & build something new everyday",
@@ -35,16 +39,15 @@ const cardData = [
     label: "Role",
   },
   {
-    background:
-      "https://imgs.search.brave.com/-EtLM4WmJWcN9VL0uI4VBJaqdyEGIz5Nrr6awwIkw7k/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/Z3V2aS5pbi9ibG9n/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDI0/LzA1LzctQmVzdC1Q/cmFjdGljZXMtdG8t/U2VjdXJlLU1FUk4t/U3RhY2slRTIlODAl/QThBcHBsaWNhdGlv/bnMud2VicA",
+    background: MERN,
+
     color: "#120F17",
     title: "MERN",
     description: "MongoDB, Express, React, Node",
     label: "Tech Stack",
   },
   {
-    background:
-      "https://imgs.search.brave.com/ibK5t1vfrErVjwSHgGccjGC8rwNND_6LZXYT4UTduJM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wcmV2/aWV3LnJlZGQuaXQv/ZHJvcC15b3VyLWJl/c3QtcmRyLXNjcmVl/bnNob3RzLXYwLWh0/am1xdHBzZGJ6ZjEu/anBlZz93aWR0aD00/MzIwJmZvcm1hdD1w/anBnJmF1dG89d2Vi/cCZzPWNhY2U3OWM2/OThiY2IzNWQ4Zjg5/YWViYzkxMjg5NDc2/ODkzODU2NGE",
+    background: aboutGame,
     color: "#120F17",
     title: "Video games",
     description: "Love to play games, specially Story modes ",
@@ -549,7 +552,7 @@ const MagicBento = ({
             grid-template-columns: 1fr;
             width: 100%;
             margin: 0 auto;
-            padding: 0.5rem;
+            padding: 0rem;
           }
            
           @media (min-width: 600px) {
@@ -695,11 +698,18 @@ const MagicBento = ({
                   clickEffect={clickEffect}
                   enableMagnetism={enableMagnetism}
                 >
-                  <img
-                    className="w-full absolute opacity-60 p-0.5 rounded-2xl h-full "
-                    src={card.background}
-                    alt=""
-                  />
+                  <div className="absolute w-full h-full group md:opacity-100 opacity-60">
+                    <img
+                      className="absolute inset-0 w-full h-full object-cover rounded-2xl p-0.5 md:mix-blend-overlay scale-110 group-hover:scale-100 transition-all duration-500 ease-out group-hover:opacity-0"
+                      src={card.background}
+                      alt=""
+                    />
+                    <img
+                      className="absolute inset-0 w-full h-full object-cover rounded-2xl p-0.5 mix-blend-normal opacity-0 scale-110 group-hover:scale-100 transition-all duration-500 ease-out group-hover:opacity-100"
+                      src={card.background}
+                      alt=""
+                    />
+                  </div>
 
                   <div className="p-5 flex justify-between flex-col h-full">
                     <div className="card__header flex justify-between gap-3 relative text-white">
@@ -738,25 +748,25 @@ const MagicBento = ({
                     const rect = el.getBoundingClientRect();
                     const x = e.clientX - rect.left;
                     const y = e.clientY - rect.top;
-                    const centerX = rect.width / 2;
-                    const centerY = rect.height / 2;
+                    const centerX = rect.width / 8;
+                    const centerY = rect.height / 8;
 
                     if (enableTilt) {
-                      const rotateX = ((y - centerY) / centerY) * -10;
-                      const rotateY = ((x - centerX) / centerX) * 10;
+                      const rotateX = ((y - centerY) / centerY) * -2;
+                      const rotateY = ((x - centerX) / centerX) * 2;
 
                       gsap.to(el, {
                         rotateX,
                         rotateY,
-                        duration: 0.1,
+                        duration: 0.6,
                         ease: "power2.out",
-                        transformPerspective: 1000,
+                        transformPerspective: 10,
                       });
                     }
 
                     if (enableMagnetism) {
-                      const magnetX = (x - centerX) * 0.05;
-                      const magnetY = (y - centerY) * 0.05;
+                      const magnetX = (x - centerX) * 0.02;
+                      const magnetY = (y - centerY) * 0.02;
 
                       gsap.to(el, {
                         x: magnetX,
