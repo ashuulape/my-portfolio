@@ -14,14 +14,14 @@ const Intro = (props) => {
     tl.to(textsplit.chars, {
       y: -1000,
       opacity: 1,
-      duration: 1.1,
+      duration: 1,
       stagger: 0.05,
       ease: "power3.out",
     })
       .to(textsplit.chars, {
         y: -2000,
-        opacity: 0,
-        duration: 0.7,
+        opacity: 1,
+        duration: 0.8,
         stagger: -0.05,
         ease: "power3.in",
       })
@@ -39,7 +39,13 @@ const Intro = (props) => {
     <section className="full-height fixed  z-999 my-[10vh] w-full flex items-center justify-center pointer-events-none">
       <h1
         id="introtext"
-        className={`text-black tracking-widest text-center font-[lowen] text-[30vw] w-fit h-fit md:translate-y-[70vh] translate-y-[100dvh]  font-medium  pointer-events-auto  `}
+        className={`text-black absolute tracking-widest text-center font-[lowen] text-[30vw] w-fit h-fit md:translate-y-[100vh] translate-y-[100dvh]  font-medium  pointer-events-auto z-10 `}
+      >
+        {props.text}
+      </h1>
+      <h1
+        id="introtext"
+        className={`${props.color} absolute tracking-widest text-center font-[lowen] text-[30vw] w-fit h-fit md:translate-y-[100vh] translate-y-[100dvh]  font-medium  pointer-events-auto z-8 `}
       >
         {props.text}
       </h1>

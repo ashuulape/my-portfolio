@@ -161,9 +161,8 @@ const OptionWheel = ({
   const applyTarget = useCallback(
     (value, snap) => {
       const cfg = cfgRef.current;
-      if (cfg.count === 0) return;
       let v = value;
-      if (!cfg.loop || cfg.count <= 1) v = Math.min(Math.max(v, 0), Math.max(cfg.count - 1, 0));
+      if (!cfg.loop) v = Math.min(Math.max(v, 0), Math.max(cfg.count - 1, 0));
       if (snap) v = Math.round(v);
       targetRef.current = v;
       const idx = ((Math.round(v) % cfg.count) + cfg.count) % cfg.count;
@@ -218,10 +217,6 @@ const OptionWheel = ({
     (e) => {
       const drag = dragRef.current;
       if (!drag) return;
-      if (e.pointerType === "mouse" && e.buttons === 0) {
-        handlePointerEnd();
-        return;
-      }
       const dy = e.clientY - drag.y;
       if (!dragMovedRef.current && Math.abs(dy) > 4) {
         dragMovedRef.current = true;
@@ -311,11 +306,6 @@ const OptionWheel = ({
       onPointerMove={handlePointerMove}
       onPointerUp={handlePointerEnd}
       onPointerCancel={handlePointerEnd}
-      onPointerLeave={() => {
-        if (dragRef.current && !dragMovedRef.current) {
-          handlePointerEnd();
-        }
-      }}
       onKeyDown={handleKeyDown}
     >
       {items.map((label, index) => (

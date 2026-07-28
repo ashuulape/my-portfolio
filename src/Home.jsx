@@ -35,7 +35,7 @@ const Home = () => {
   return (
     <div>
       <Slide ref={slideRef} color={"bg-[#771bc6]"} />
-      {text && <Intro text={"HOME"} />}
+      {text && <Intro text={"HOME"} color={"text-[#771bc6]"} />}
 
       <div className="fixed full-height w-full pointer-events-none z-0  ">
         <div className="absolute full-height w-full ">

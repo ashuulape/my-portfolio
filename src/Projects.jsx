@@ -70,7 +70,7 @@ const Projects = () => {
   ];
 
   const slideRef = useRef();
-  const [text, settext] = useState(true);
+
   const [load, setload] = useState(true);
   const handleClick = (link, label) => {
     console.log(label);
@@ -79,11 +79,6 @@ const Projects = () => {
     }
   };
 
-  useEffect(() => {
-    const time = setTimeout(() => settext(false), 2000);
-
-    return () => clearTimeout(time);
-  }, []);
   useEffect(() => {
     const time = setTimeout(() => setload(false), 2500);
 
@@ -95,7 +90,7 @@ const Projects = () => {
       className={`${load ? "h-dvh" : "h-fit"} w-full text-10 bg-transparent relative overflow-clip`}
     >
       <Slide color={"bg-[#87ceeb]"} ref={slideRef} />
-      <Intro text={"PROJECTS"} />
+      <Intro text={"PROJECTS"} color={"text-[#87ceeb]"} />
 
       <LightPillar
         topColor="#82C8E5"

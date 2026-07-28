@@ -57,7 +57,7 @@ const AboutMe = () => {
       className=" top-0 full-height overflow-clip  w-full  bg-black pointer-events-auto z-10 "
     >
       <Slide color={"bg-[#ff69b4]"} ref={slideRef} />
-      <Intro text={"ABOUT ME"} />
+      <Intro text={"ABOUT ME"} color={"text-[#ff69b4]"} />
       <DotField
         dotRadius={1.5}
         dotSpacing={20}

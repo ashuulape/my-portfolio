@@ -86,7 +86,7 @@ const Contact = () => {
       </div>
 
       <Slide color={"bg-[#ff710f]"} ref={slideRef} />
-      <Intro text={"CONTACT"} />
+      <Intro text={"CONTACT"} color={"text-[#ff710f]"} />
       <StaggeredMenu
         position="left"
         displaySocials

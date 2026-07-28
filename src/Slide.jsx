@@ -10,12 +10,12 @@ export const Slide = forwardRef(({ color = "bg-red-500" }, ref) => {
   const { contextSafe } = useGSAP(() => {
     gsap.from(".maindiv1-item", {
       y: "100dvh",
-      delay: 2.5,
+      delay: 2.6,
       stagger: 0.2,
     });
     gsap.from(".maindiv2-item", {
       y: -1000,
-      delay: 2.5,
+      delay: 2.6,
       stagger: 0.2,
     });
   });
@@ -23,7 +23,7 @@ export const Slide = forwardRef(({ color = "bg-red-500" }, ref) => {
   const transition = contextSafe(async (e) => {
     await Promise.all([
       gsap.to(".maindiv1-item", {
-        y: "100vh",
+        y: "100dvh",
         stagger: 0.2,
       }),
       gsap.to(".maindiv2-item", {
