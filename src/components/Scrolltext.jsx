@@ -94,7 +94,7 @@ const Scrolltext = () => {
     <div ref={scrollRef} className="text-white w-full md:px-20 px-6 ">
       <h1
         id="maintext"
-        className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl tracking-wide font-[Akira] leading-tight lg:mb-0 mb-8 "
+        className="w-full text-center text-4xl  sm:text-5xl md:text-6xl lg:text-6xl xl:text-9xl tracking-wide font-[Akira] leading-tight lg:mb-0 mb-8 "
       >
         Want's to know more!
       </h1>

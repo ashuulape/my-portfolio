@@ -10,6 +10,8 @@ import gsap from "gsap";
 import SplitText from "./components/SplitText";
 import { motion } from "motion/react";
 import Scrolltext from "./components/Scrolltext";
+import Intro from "./components/Intro";
+import DotField from "./components/DotField";
 
 const AboutMe = () => {
   const slideRef = useRef(null);
@@ -52,33 +54,21 @@ const AboutMe = () => {
   return (
     <div
       ref={boxRef}
-      className="full-height overflow-clip  w-full relative bg-black pointer-events-none z-10 "
+      className=" top-0 full-height overflow-clip  w-full  bg-black pointer-events-auto z-10 "
     >
       <Slide color={"bg-[#ff69b4]"} ref={slideRef} />
-
-      {text && (
-        <motion.div
-          animate={{
-            opacity: 0,
-          }}
-          transition={{ duration: 0.8, delay: 1.5 }}
-          className="absolute flex w-full h-[100dvh] z-99999 text-center items-center justify-center"
-        >
-          <SplitText
-            text="About Me"
-            className="text-5xl font-semibold text-center text-black "
-            delay={50}
-            duration={1.8}
-            ease="power3.out"
-            splitType="chars"
-            from={{ opacity: 1, y: 60 }}
-            to={{ opacity: 1, y: 0 }}
-            threshold={0.1}
-            rootMargin="-100px"
-            textAlign="center"
-          />
-        </motion.div>
-      )}
+      <Intro text={"ABOUT ME"} />
+      <DotField
+        dotRadius={1.5}
+        dotSpacing={20}
+        cursorRadius={500}
+        cursorForce={0.1}
+        bulgeOnly={true}
+        bulgeStrength={67}
+        glowRadius={160}
+        sparkle={false}
+        waveAmplitude={0}
+      />
 
       <div
         style={{
@@ -136,7 +126,7 @@ const AboutMe = () => {
             minFontSize={30}
           />
         ) : (
-          <h1 className="text-white font-[akira] w-full text-center text-[8vw] relative z-2">
+          <h1 className="text-white font-[akira] tracking-widest w-full text-center text-[8vw] relative z-2">
             ALL ABOUT ME!
           </h1>
         )}

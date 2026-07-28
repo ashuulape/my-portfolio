@@ -4,6 +4,8 @@ import ME from "../assets/me.jpg";
 import aboutGame from "../assets/aboutGame.png";
 import MERN from "../assets/MERN.png";
 import Edu from "../assets/Edu.png";
+import Catdev from "../assets/Catdev.png";
+import Nerd from "../assets/Nerd.png";
 
 const DEFAULT_PARTICLE_COUNT = 12;
 const DEFAULT_SPOTLIGHT_RADIUS = 300;
@@ -20,10 +22,12 @@ const cardData = [
     label: "Eduction",
   },
   {
+    background: MERN,
+
     color: "#120F17",
-    title: "Dashboard",
-    description: "Centralized data view",
-    label: "Overview",
+    title: "MERN",
+    description: "MongoDB, Express, React, Node",
+    label: "Tech Stack",
   },
   {
     background: ME,
@@ -33,18 +37,18 @@ const cardData = [
     label: "ME",
   },
   {
+    background: Catdev,
     color: "#120F17",
     title: "Developer",
     description: "FrontEnd / Fullstack Developer",
     label: "Role",
   },
   {
-    background: MERN,
-
+    background: Nerd,
     color: "#120F17",
-    title: "MERN",
-    description: "MongoDB, Express, React, Node",
-    label: "Tech Stack",
+    title: "Nerdy",
+    description: "Wants to learn everything at a same time",
+    label: "Personality",
   },
   {
     background: aboutGame,
@@ -713,18 +717,18 @@ const MagicBento = ({
 
                   <div className="p-5 flex justify-between flex-col h-full">
                     <div className="card__header flex justify-between gap-3 relative text-white">
-                      <span className="card__label text-end w-full text-base">
+                      <span className="card__label text-end w-full text-sm md:text-2xl font-extralight">
                         {card.label}
                       </span>
                     </div>
                     <div className="card__content flex flex-col relative text-white">
                       <h3
-                        className={`card__title font-normal text-base m-0 mb-1 ${textAutoHide ? "text-clamp-1" : ""}`}
+                        className={`card__title font-semibold md:text-2xl text-sm m-0 mb-1 ${textAutoHide ? "text-clamp-1" : ""}`}
                       >
                         {card.title}
                       </h3>
                       <p
-                        className={`card__description text-xs leading-5 opacity-90 ${textAutoHide ? "text-clamp-2" : ""}`}
+                        className={`card__description md:text-lg text-xs font-thin leading-5 opacity-90 ${textAutoHide ? "text-clamp-2" : ""}`}
                       >
                         {card.description}
                       </p>

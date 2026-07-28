@@ -10,12 +10,12 @@ export const Slide = forwardRef(({ color = "bg-red-500" }, ref) => {
   const { contextSafe } = useGSAP(() => {
     gsap.from(".maindiv1-item", {
       y: "100dvh",
-      delay: 2,
+      delay: 2.5,
       stagger: 0.2,
     });
     gsap.from(".maindiv2-item", {
       y: -1000,
-      delay: 2,
+      delay: 2.5,
       stagger: 0.2,
     });
   });
@@ -39,7 +39,7 @@ export const Slide = forwardRef(({ color = "bg-red-500" }, ref) => {
   }));
 
   return (
-    <div className="absolute full-height full-width z-999 pointer-events-none">
+    <div className="fixed top-0 full-height full-width z-500 pointer-events-none">
       <div className="flex relative full-height overflow-clip">
         <div
           id="maindiv1"

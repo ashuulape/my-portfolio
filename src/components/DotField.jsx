@@ -257,7 +257,7 @@ const DotField = memo(
     }, [dotRadius, dotSpacing]);
 
     return (
-      <div className={`w-full full-height  ${className}`}>
+      <div className={`w-full full-height fixed ${className}`}>
         <canvas
           ref={canvasRef}
           style={{

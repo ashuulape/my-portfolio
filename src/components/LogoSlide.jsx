@@ -13,6 +13,7 @@ import {
   SiPostman,
   SiMongodb,
   SiFramer,
+  SiN8N,
 } from "react-icons/si";
 
 const techLogos = [
@@ -80,6 +81,11 @@ const techLogos = [
     node: <SiFigma color="#F24E1E" />,
     title: "Figma",
     href: "https://www.figma.com",
+  },
+  {
+    node: <SiN8N color="#EA4B71" />,
+    title: "N8N",
+    href: "https://www.n8n.io",
   },
 ];
 

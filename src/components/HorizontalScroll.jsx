@@ -93,6 +93,7 @@ const HorizontalScroll = ({ scrollObj }) => {
           <h1 className="text-[12vw] md:text-[15vw] flex justify-center flex-col font-black shrink-0">
             PROJECTS
           </h1>
+
           {scrollObj.map((obj, index) => (
             <div
               key={index}

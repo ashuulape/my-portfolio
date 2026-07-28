@@ -32,6 +32,7 @@ import {
   SiThreedotjs,
   SiTwinmotion,
 } from "react-icons/si";
+import Intro from "./components/Intro";
 
 const Projects = () => {
   const scrollObj = [
@@ -78,20 +79,6 @@ const Projects = () => {
     }
   };
 
-  const [scrollPosi, setscrollPosi] = useState(0);
-  useEffect(() => {
-    const handleScroll = () => {
-      console.log(window.scrollY / 100);
-      setscrollPosi(window.screenY / 100);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   useEffect(() => {
     const time = setTimeout(() => settext(false), 2000);
 
@@ -108,36 +95,34 @@ const Projects = () => {
       className={`${load ? "h-dvh" : "h-fit"} w-full text-10 bg-transparent relative overflow-clip`}
     >
       <Slide color={"bg-[#87ceeb]"} ref={slideRef} />
+      <Intro text={"PROJECTS"} />
 
       <LightPillar
         topColor="#82C8E5"
         bottomColor="#154C63"
         intensity={1.1}
-        rotationSpeed={0.3}
+        rotationSpeed={0.15}
         glowAmount={0.003}
-        pillarWidth={5}
+        pillarWidth={7}
         pillarHeight={0.4}
         noiseIntensity={0.5}
-        pillarRotation={scrollPosi}
+        pillarRotation={25}
         interactive={true}
-        mixBlendMode="normal"
+        mixBlendMode="screen"
         quality="high"
       />
 
-      <DotField className={"fixed z-0"} />
-
-      {text && (
-        <motion.div
-          animate={{ opacity: [0, 1, 0] }}
-          transition={{ duration: 0.8, delay: 1.5 }}
-          className="fixed flex w-[100svw] h-[100dvh] z-99999 text-center items-center justify-center"
-        >
-          <SplitText
-            text="Projects"
-            className="text-5xl font-semibold text-center text-black "
-          />
-        </motion.div>
-      )}
+      <DotField
+        dotRadius={1.5}
+        dotSpacing={20}
+        cursorRadius={500}
+        cursorForce={0.1}
+        bulgeOnly={true}
+        bulgeStrength={67}
+        glowRadius={160}
+        sparkle={false}
+        waveAmplitude={0}
+      />
 
       <StaggeredMenu transitionfun={handleClick} />
       <HorizontalScroll scrollObj={scrollObj} />

@@ -15,6 +15,10 @@
   font-family: 'Galano';
   src: url(fonts/GalanoGrotesqueLightItalic.otf);
 }
+@font-face {
+  font-family: 'Lowen';
+  src: url(fonts/WS\ Lowen\ Demo.ttf);
+}
 @custom-variant dark (&:is(.dark *));
 
 @theme  {
