@@ -76,15 +76,15 @@ const Home = () => {
         <div className="full-height absolute w-full flex items-center pt-12 text-white pointer-events-none z-10">
           <Lanyard position={[5, 0, 20]} gravity={[0, -40, 0]} />
           <div className="h-[70%] sm:h-1/2 w-[90%] sm:w-[80%] md:w-1/2 flex flex-col items-start md:justify-center justify-items-start pl-[5vw] pb-[10vh] md:pb-0 z-2">
-            <h1 className="flex flex-wrap items-center gap-1 text-2xl md:text-5xl font-pixel-grid font-bold">
+            <h1 className="flex flex-wrap items-center gap-1 text-lg md:text-3xl font-pixel-grid font-semibold mb-4">
               Be,
               <RotatingText
                 texts={["Creative", "Passionate", "Cool!"]}
-                mainClassName=" w-fit text-white px-2 sm:px-2 md:px-3 bg-[#7463F8] text-black overflow-hidden py-0.5 sm:py-1 md:py-0.5 justify-center rounded-lg"
+                mainClassName=" w-fit   text-[#a650f0] overflow-hidden py-0.5 sm:py-1 md:py-0.5 justify-center rounded-lg"
               />
-            </h1>{" "}
-            <br />
-            <h2 className="text-2xl md:text-6xl mt-[-1rem] md:mt-0">
+            </h1>
+
+            <h2 className="text-2xl md:text-4xl mt-[-1rem] md:mt-0 font-semibold">
               Hi! I'm Ashutosh.
             </h2>
             <h3 className="text-sm md:text-[2vh] text-white/50 mt-1 md:mt-0">
@@ -92,35 +92,47 @@ const Home = () => {
               A creative Frontend Developer who knows some sort of Backend also
             </h3>
             <br />
-            <SpecularButton
-              size={window.outerWidth > 768 ? "lg" : "sm"}
-              radius={7}
-              tint="#5c00f9"
-              tintOpacity={0.12}
-              blur={0}
-              textColor="#D7CFFF"
-              lineColor="#f2a9a9"
-              baseColor="#8755F1"
-              intensity={0.8}
-              shineSize={10}
-              shineFade={40}
-              thickness={1}
-              speed={0.9}
-              followMouse
-              proximity={190}
-              autoAnimate={false}
-              onClick={() => handleClick("about")}
-              className="flex flex-col"
-            >
-              <h1 className="flex gap-2">
+            {window.outerWidth > 768 ? (
+              <SpecularButton
+                size={"sm"}
+                radius={7}
+                tint="#5c00f9"
+                tintOpacity={0.12}
+                blur={0}
+                textColor="#D7CFFF"
+                lineColor="#f2a9a9"
+                baseColor="#8755F1"
+                intensity={0.8}
+                shineSize={10}
+                shineFade={40}
+                thickness={1}
+                speed={0.9}
+                followMouse
+                proximity={190}
+                autoAnimate={false}
+                onClick={() => handleClick("about")}
+                className="flex flex-col "
+              >
+                <h1 className="flex gap-2">
+                  About me
+                  <img
+                    src="https://img.icons8.com/?size=100&id=39969&format=png&color=D7CFFF"
+                    className="cover h-4 "
+                    alt=""
+                  />
+                </h1>
+              </SpecularButton>
+            ) : (
+              <button className="bg-[#771bc6]/30 text-[#D7CFFF] px-4 py-2 text-sm rounded-sm border-1 border-[#771bc6] flex gap-2 items-center">
+                {" "}
                 About me
                 <img
                   src="https://img.icons8.com/?size=100&id=39969&format=png&color=D7CFFF"
-                  className="cover h-4"
+                  className="cover h-4 "
                   alt=""
                 />
-              </h1>
-            </SpecularButton>
+              </button>
+            )}
           </div>
         </div>
         <LogoSlide />

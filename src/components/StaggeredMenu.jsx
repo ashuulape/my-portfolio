@@ -11,9 +11,9 @@ const item = [
 ];
 
 const socialItem = [
-  { label: "Twitter", link: "https://twitter.com" },
-  { label: "GitHub", link: "https://github.com" },
-  { label: "LinkedIn", link: "https://linkedin.com" },
+  { label: "GitHub", link: "https://github.com/ashuulape" },
+  { label: "LinkedIn", link: "" },
+  { label: "Instagram", link: "https://twitter.com" },
 ];
 
 export const StaggeredMenu = ({

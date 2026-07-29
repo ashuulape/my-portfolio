@@ -24,27 +24,27 @@ const ProjectDetails = ({ obj }) => {
 
       const iphone = card.querySelector(".iphone");
       const split = new SplitText(headline, { type: "chars" });
-      const splittext = new SplitText(text, { type: "words" });
+      const splittext = new SplitText(text, { type: "lines" });
 
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: card, // ← this specific card, not the class
-          start: "top bottom",
+          start: "top 80%",
           end: () => (window.innerWidth < 768 ? "top 30%" : "top top"),
           scrub: 1,
           invalidateOnRefresh: true,
         },
       });
 
-      tl.from(card, { opacity: 0, duration: 1 })
+      tl.from(card, { opacity: 1, duration: 1 })
         .from(
           split.chars,
           { y: 10, opacity: 0, duration: 2, stagger: 0.3 },
           "<",
         )
-        .from(iphone, { y: "40vh", opacity: 0, duration: 3 }, "<")
+        .from(iphone, { y: 100, opacity: 0, duration: 3 }, "<")
         .from(
-          splittext.words,
+          splittext.lines,
           { y: 10, opacity: 0, duration: 1, stagger: 0.3 },
           "<",
         );
@@ -69,6 +69,12 @@ const ProjectDetails = ({ obj }) => {
 
   return (
     <section className="maindiv h-fit py-20 px-10 flex flex-col md:gap-[30vh] gap-52 items-center relative ">
+      <h1
+        id="Headtext"
+        className="  font-thin  text-[7vw] md:translate-y-[30vh] translate-y-[15vh] text-white tracking-widest "
+      >
+        Details
+      </h1>
       {obj.map((e) => {
         return (
           <div
@@ -80,7 +86,7 @@ const ProjectDetails = ({ obj }) => {
             <Iphone
               src={e.mobileImg}
               className={
-                "iphone absolute md:right-20 right-1/9 bottom-0 sm:h-90  md:h-120 lg:h-160 xl:h-200 h-70"
+                "iphone absolute md:right-20 right-1/9 bottom-0 sm:h-90  md:h-100 lg:h-120 xl:h-150 h-70"
               }
             />
             <div className=" flex  flex-row w-full h-full rounded-2xl  ">
@@ -100,7 +106,9 @@ const ProjectDetails = ({ obj }) => {
                   </ul>
                 </p>
               </div>
-              <div className="bg-gray-600 w-2/5 md:flex-1 flex-2 text-white px-2 py-4 rounded">
+              <div
+                className={`${e.bgcolor} w-2/5 md:flex-1 flex-2 text-white px-2 py-4 rounded`}
+              >
                 <h1 className="font-bold md:mb-3 mb-1 md:text-3xl text-2xl font-[akira] tracking-wider w-full text-center">
                   Tech stack
                 </h1>

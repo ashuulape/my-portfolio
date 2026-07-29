@@ -40,6 +40,7 @@ const Projects = () => {
       bg: UberPc,
       title: "Uber Clone",
       mobileImg: UberMobile,
+      bgcolor: "bg-[#343134]",
       tech: [
         <SiReact color="#61DAFB" />,
         <SiJavascript color="#F7DF1E" />,
@@ -59,13 +60,24 @@ const Projects = () => {
       bg: portPc,
       title: "Portfolio",
       mobileImg: portMobile,
-      tech: [<SiReact />, <SiTailwindcss />, <SiThreedotjs />, <SiGsap />],
+      bgcolor: "bg-[#7949A6]",
+      tech: [
+        <SiReact color="#61DAFB" />,
+        <SiTailwindcss color="#06B6D4" />,
+        <SiThreedotjs color="#000000" />,
+        <SiGsap color="#88CE02" />,
+      ],
     },
     {
       bg: GamePC,
       title: "GameFlix",
       mobileImg: GameMobile,
-      tech: [<SiJavascript />, <SiCss />, <SiHtml5 />],
+      bgcolor: "bg-[#BC0912]",
+      tech: [
+        <SiJavascript color="#F7DF1E" />,
+        <SiCss color="#1572B6" />,
+        <SiHtml5 color="#E34F26" />,
+      ],
     },
   ];
 
@@ -87,24 +99,25 @@ const Projects = () => {
 
   return (
     <div
-      className={`${load ? "h-dvh" : "h-fit"} w-full text-10 bg-transparent relative overflow-clip`}
+      className={`${load ? "h-dvh" : "h-fit"} w-full text-10 bg-transparent relative overflow-clip pointer-events-none`}
     >
       <Slide color={"bg-[#87ceeb]"} ref={slideRef} />
       <Intro text={"PROJECTS"} color={"text-[#87ceeb]"} />
 
       <LightPillar
-        topColor="#82C8E5"
-        bottomColor="#154C63"
-        intensity={1.1}
-        rotationSpeed={0.15}
-        glowAmount={0.003}
-        pillarWidth={7}
+        topColor="#87ceeb"
+        bottomColor="#ffcafc"
+        intensity={0.9}
+        rotationSpeed={0.1}
+        glowAmount={0.002}
+        pillarWidth={5}
         pillarHeight={0.4}
         noiseIntensity={0.5}
         pillarRotation={25}
         interactive={true}
         mixBlendMode="screen"
         quality="high"
+        className="pointer-events-auto"
       />
 
       <DotField

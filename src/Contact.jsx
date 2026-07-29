@@ -32,7 +32,7 @@ const Contact = () => {
       h1: "Linkedin",
       dis: "i didn't use that much",
       link: "Ashutosh Ulape",
-      click: "www.linkedin.com/in/ashutosh-ulape-6b43a4325",
+      click: "https://www.linkedin.com/in/ashutosh-ulape-6b43a4325",
     },
   ];
   return (
