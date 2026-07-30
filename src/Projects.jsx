@@ -14,6 +14,8 @@ import UberPc from "./assets/projectImg/UberPC.png";
 import UberMobile from "./assets/projectImg/UberMobile.png";
 import GamePC from "./assets/projectImg/GamePC.png";
 import GameMobile from "./assets/projectImg/GameMobile.png";
+import BankPC from "./assets/projectImg/BankPc.png";
+import BankMobile from "./assets/projectImg/BankMobile.png";
 import {
   SiReact,
   SiJavascript,
@@ -54,6 +56,19 @@ const Projects = () => {
         <SiJsonwebtokens color="#000000" />,
         <SiGsap color="#88CE02" />,
         <SiAxios color="#5A29E4" />,
+      ],
+    },
+    {
+      bg: BankPC,
+      title: "Banking System",
+      mobileImg: BankMobile,
+      bgcolor: "bg-[#D8CFBC]",
+      tech: [
+        <SiNodedotjs color="#000000" />,
+        <SiExpress color="#88CE02" />,
+        <SiMongodb color="#61DAFB" />,
+        <SiReact color="#61DAFB" />,
+        <SiTailwindcss color="#06B6D4" />,
       ],
     },
     {
