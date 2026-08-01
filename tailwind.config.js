@@ -10,6 +10,10 @@ export default  {
         "pixel-triangle": ["var(--font-geist-pixel-triangle)"],
         "pixel-line": ["var(--font-geist-pixel-line)"],
       },
+       screens: {
+      xs: '400px',
+    },
+
     },
   },
 };

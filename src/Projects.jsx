@@ -41,6 +41,15 @@ const Projects = () => {
     {
       bg: UberPc,
       title: "Uber Clone",
+      tag: "A real-time Uber-style ride-hailing app with live GPS tracking and Socket.IO-powered ride matching",
+      feat: [
+        "Real-Time Ride Matching — Socket.IO connects passengers and captains instantly, matching riders with nearby captains within a 10 km radius using MongoDB geospatial queries ($geoWithin, $centerSphere)",
+        "Live GPS Tracking — Continuous location updates every 10 seconds for both passengers and captains, rendered live on an interactive Leaflet map",
+        "Dynamic Fare Estimation — Real-time fare calculation for Car, Auto, and Bike based on live distance and duration from the Geoapify Routing API",
+        "End-to-End Ride Lifecycle — Full trip flow from request → OTP-secured ride start → live route tracking → completion, synced in real time via Socket.IO events",
+        "Secure Authentication — JWT-based auth with HTTP-only cookies, bcrypt password hashing, and token blacklisting with MongoDB TTL auto-expiry",
+        "Route Visualization — GeoJSON polyline routes drawn on dark-themed map tiles, with address autocomplete and reverse geocoding via Geoapify",
+      ],
       mobileImg: UberMobile,
       bgcolor: "bg-[#343134]",
       tech: [
@@ -61,12 +70,22 @@ const Projects = () => {
     {
       bg: BankPC,
       title: "Banking System",
+      tag: "A secure banking backend with JWT auth and a double-entry ledger for atomic, auditable transactions.",
+      feat: [
+        "JWT Authentication with Token Blacklisting — Secure login via HTTP-only cookies with safe logout using a blacklist and MongoDB TTL auto-expiry, preventing token reuse",
+        "Double-Entry Ledger System — Immutable DEBIT/CREDIT entries with balances derived via MongoDB aggregation pipelines, ensuring auditability",
+        "Atomic Transactions with Idempotency — MongoDB sessions and idempotency keys guarantee safe, duplicate-free fund transfers",
+        "Role-Based Access Control — Privileged systemUser flag restricts sensitive operations to authorized users",
+        "Automated Email Notifications — Welcome and transaction emails via Nodemailer with Gmail OAuth2",
+      ],
       mobileImg: BankMobile,
       bgcolor: "bg-[#D8CFBC]",
       tech: [
-        <SiNodedotjs color="#000000" />,
-        <SiExpress color="#88CE02" />,
-        <SiMongodb color="#61DAFB" />,
+        <SiJavascript color="#F7DF1E" />,
+        <SiNodedotjs color="#339933" />,
+        <SiExpress color="#000000" />,
+        <SiMongodb color="#47A248" />,
+        <SiJsonwebtokens color="#000000" />,
         <SiReact color="#61DAFB" />,
         <SiTailwindcss color="#06B6D4" />,
       ],
@@ -86,6 +105,16 @@ const Projects = () => {
     {
       bg: GamePC,
       title: "GameFlix",
+      tag: "A Netflix-style web app for discovering and exploring games, powered by the RAWG API.",
+      feat: [
+        "Netflix-Style Interface — Modern, responsive UI for browsing games instead of movies and shows",
+        "Live Trending Games — Displays currently popular games fetched in real time from the RAWG API",
+        "Search Functionality — Instantly search for any game by name",
+        "Genre-Based Browsing — Explore games by category (Action, Adventure, RPG, Sports, and more)",
+        "Detailed Game Pages — Full descriptions, ratings, platforms, and genre info for each game",
+        "RAWG API Integration — Real-time game data sourced from RAWG.io's game database",
+        "Fully Responsive Design — Optimized layout for desktop, tablet, and mobile",
+      ],
       mobileImg: GameMobile,
       bgcolor: "bg-[#BC0912]",
       tech: [
