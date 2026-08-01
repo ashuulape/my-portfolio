@@ -68,7 +68,7 @@ const ProjectDetails = ({ obj }) => {
   });
 
   return (
-    <section className="maindiv h-fit py-20 px-10 flex flex-col md:gap-[30vh] gap-52 items-center relative ">
+    <section className="maindiv h-fit pb-20 px-10 flex flex-col md:gap-[30vh] gap-52 items-center relative ">
       <h1
         id="Headtext"
         className="  font-thin  text-[7vw] md:translate-y-[30vh] translate-y-[15vh] text-white tracking-widest "

@@ -59,7 +59,7 @@ const HorizontalScroll = ({ scrollObj }) => {
       "<",
     );
     tl.to(projectsEl, {
-      x: "-600vw",
+      x: window.outerWidth > 768 ? "-250vw" : "-225dvh",
       duration: 7,
     });
 
@@ -77,7 +77,7 @@ const HorizontalScroll = ({ scrollObj }) => {
     // The section needs explicit height so sticky has room to work.
     <section
       ref={sectionRef}
-      className="w-full h-[400vh] relative text-white pointer-events-none "
+      className="w-full sticky h-[400dvh]  text-white pointer-events-none "
     >
       <div className="sticky pl-[5vw] top-0 h-[100dvh] w-screen z-10 [overflow-x:clip]">
         <div
