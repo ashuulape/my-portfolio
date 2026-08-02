@@ -3,12 +3,14 @@ import { Iphone } from "./ui/iphone";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
+import { useNavigate } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const HorizontalScroll = ({ scrollObj }) => {
   const sectionRef = useRef(null);
   const projectsRef = useRef(null);
+  const navigate = useNavigate();
 
   useGSAP(() => {
     const section = sectionRef.current;
@@ -59,7 +61,7 @@ const HorizontalScroll = ({ scrollObj }) => {
       "<",
     );
     tl.to(projectsEl, {
-      x: window.outerWidth > 768 ? "-250vw" : "-225dvh",
+      x: window.outerWidth > 768 ? "-255vw" : "-225dvh",
       duration: 7,
     });
 
@@ -93,21 +95,23 @@ const HorizontalScroll = ({ scrollObj }) => {
           </h1>
 
           {scrollObj.map((obj, index) => (
-            <div
-              key={index}
-              className="image laptop md:h-[8vw] h-10 md:translate-0 -translate-y-8"
-              style={{ backgroundImage: `url(${obj.bg})` }}
-            >
-              <h1 className="text-white font-thin text-[10px] md:text-[0.4vw] absolute w-full text-center top-[-18px]">
-                {obj?.title}
-              </h1>
-              <Iphone
-                src={obj.mobileImg}
-                className={
-                  "absolute md:right-0 right-[50%]  md:translate-[1vw] translate-y-8 translate-x-5 md:h-[8vw] h-20 "
-                }
-              />
-            </div>
+            <a href={obj?.link}>
+              <div
+                key={index}
+                className="image laptop md:h-[8vw] h-10 md:translate-0 -translate-y-8 pointer-events-auto"
+                style={{ backgroundImage: `url(${obj.bg})` }}
+              >
+                <h1 className="text-white font-thin text-[10px] md:text-[0.4vw] absolute w-full text-center top-[-18px]">
+                  {obj?.title}
+                </h1>
+                <Iphone
+                  src={obj.mobileImg}
+                  className={
+                    "absolute md:right-0 right-[50%]  md:translate-[1vw] translate-y-8 translate-x-5 md:h-[8vw] h-20 "
+                  }
+                />
+              </div>
+            </a>
           ))}
         </div>
       </div>

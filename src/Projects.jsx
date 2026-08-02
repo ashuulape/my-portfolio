@@ -52,6 +52,7 @@ const Projects = () => {
       ],
       mobileImg: UberMobile,
       bgcolor: "bg-[#343134]",
+      link: "https://myuber69.onrender.com/",
       tech: [
         <SiReact color="#61DAFB" />,
         <SiJavascript color="#F7DF1E" />,
@@ -80,6 +81,7 @@ const Projects = () => {
       ],
       mobileImg: BankMobile,
       bgcolor: "bg-[#D8CFBC]",
+      link: "https://nextbank69.onrender.com/",
       tech: [
         <SiJavascript color="#F7DF1E" />,
         <SiNodedotjs color="#339933" />,
@@ -117,6 +119,7 @@ const Projects = () => {
       ],
       mobileImg: GameMobile,
       bgcolor: "bg-[#BC0912]",
+      link: "https://gameflix69.netlify.app/",
       tech: [
         <SiJavascript color="#F7DF1E" />,
         <SiCss color="#1572B6" />,

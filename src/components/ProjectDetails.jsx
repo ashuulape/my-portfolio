@@ -80,15 +80,23 @@ const ProjectDetails = ({ obj }) => {
           <div
             className={`infodiv sticky top-[20vh] md:top-[10vh] mt-10 md:h-[80vh] sm:h-[50vh] h-[60vh] md:w-[80vw] w-[90vw] rounded-sm bg-white border-2 border-[#87ceeb] lg:px-10 md:px-6 sm:px-4 py-1 px-2 overflow-hidden`}
           >
-            <h1 className="headline opacity-100 font-[Schabo] absolute  sm:bottom-0 lg:bottom-0  md:bottom-0 text-black w-full  md:w-full  text-start sm:w-2/3 md:text-6xl lg:text-8xl xl:text-[120px] 2xl:text-[180px] text-[10vw] ">
-              {e.title}
-            </h1>
-            <Iphone
-              src={e.mobileImg}
-              className={
-                "iphone absolute md:right-20 right-1/50  bottom-0 sm:h-90  md:h-100 lg:h-120 xl:h-160 2xl:h-200  h-90"
-              }
-            />
+            <a href={e.link}>
+              <h1
+                className={`headline pointer-events-auto  opacity-100 font-[Schabo] absolute  sm:bottom-0 lg:bottom-0  md:bottom-0 text-black w-full  md:w-full  text-start sm:w-2/3 md:text-6xl lg:text-8xl xl:text-[120px] 2xl:text-[180px] text-[10vw] `}
+              >
+                {e.title}
+              </h1>
+            </a>
+
+            <a href={e?.link}>
+              <Iphone
+                src={e.mobileImg}
+                className={
+                  "iphone absolute md:right-20 right-1/50  bottom-0 sm:h-90  md:h-100 lg:h-120 xl:h-160 2xl:h-200  h-90 pointer-events-auto"
+                }
+              />
+            </a>
+
             <div className=" flex  flex-row w-full h-full rounded-2xl  ">
               <div className=" md:flex-3 flex-[4] rounded-2xl flex items-end sm:items-start md:items-start lg:items-start xl:items-center py-2">
                 <p className="w-3/4 paragraph popins font-bold text-gray-900 text-[10px] sm:text-[12px] md:text-[18px] lg:text-[24px]   ">
