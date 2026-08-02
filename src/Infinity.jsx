@@ -1,5 +1,6 @@
 import React from "react";
 import InfiniteMenu from "./components/InfiniteMenu";
+import methinking from "./assets/meThinking.png";
 
 const Infinity = () => {
   const items = [
@@ -10,7 +11,7 @@ const Infinity = () => {
       description: "This is pretty cool, right?",
     },
     {
-      image: "https://picsum.photos/400/400?grayscale",
+      image: "https://picsum.photos/400/400?",
       link: "/about",
       title: "About Me",
       description: "This is pretty cool, right?",

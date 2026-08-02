@@ -95,6 +95,14 @@ const Projects = () => {
     {
       bg: portPc,
       title: "Portfolio",
+      tag: "This project — an interactive 3D portfolio featuring custom WebGL shaders, physics lanyard, and GSAP animations",
+      feat: [
+        "Physics-Based 3D Lanyard — Real-time rigid-body physics simulation rendering an interactive ID card hanging from a string, built with React Three Fiber and Rapier",
+        "Custom WebGL Shaders — High-performance graphics built with OGL, including Color Bends, Plasma, Volumetric Light Pillars, and an Infinite Menu wheel",
+        "Interactive Magic Bento Grid — Custom Bento Grid with spotlight tracking, magnetic tilt physics, glowing borders, and particle emissions",
+        "GSAP ScrollTrigger & Kinetic Text — Smooth scroll-linked slide-in animations, kinetic text pressure, and character-split transitions",
+        "3D iPhone Mockups — Dynamic project detail presentation with interactive iPhone frames and live project demos",
+      ],
       mobileImg: portMobile,
       bgcolor: "7949A6",
       tech: [
