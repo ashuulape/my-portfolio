@@ -51,7 +51,7 @@ const Projects = () => {
         "Route Visualization — GeoJSON polyline routes drawn on dark-themed map tiles, with address autocomplete and reverse geocoding via Geoapify",
       ],
       mobileImg: UberMobile,
-      bgcolor: "bg-[#343134]",
+      bgcolor: "343134",
       link: "https://myuber69.onrender.com/",
       tech: [
         <SiReact color="#61DAFB" />,
@@ -80,7 +80,7 @@ const Projects = () => {
         "Automated Email Notifications — Welcome and transaction emails via Nodemailer with Gmail OAuth2",
       ],
       mobileImg: BankMobile,
-      bgcolor: "bg-[#D8CFBC]",
+      bgcolor: "D8CFBC",
       link: "https://nextbank69.onrender.com/",
       tech: [
         <SiJavascript color="#F7DF1E" />,
@@ -96,7 +96,7 @@ const Projects = () => {
       bg: portPc,
       title: "Portfolio",
       mobileImg: portMobile,
-      bgcolor: "bg-[#7949A6]",
+      bgcolor: "7949A6",
       tech: [
         <SiReact color="#61DAFB" />,
         <SiTailwindcss color="#06B6D4" />,
@@ -118,7 +118,7 @@ const Projects = () => {
         "Fully Responsive Design — Optimized layout for desktop, tablet, and mobile",
       ],
       mobileImg: GameMobile,
-      bgcolor: "bg-[#BC0912]",
+      bgcolor: "BC0912",
       link: "https://gameflix69.netlify.app/",
       tech: [
         <SiJavascript color="#F7DF1E" />,

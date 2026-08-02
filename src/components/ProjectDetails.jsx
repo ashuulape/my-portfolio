@@ -7,45 +7,37 @@ import { resolveTransition } from "framer-motion";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 const ProjectDetails = ({ obj }) => {
-  const features = [
-    "Real-time updates via Socket.IO for instant ride requests and status changes between riders and drivers",
-    "Interactive maps with React-Leaflet, showing live driver/rider markers with optimized re-rendering",
-    "Live geolocation tracking with throttling and jitter-filtering for smooth accuracy",
-    "Geocoding/routing powered by the Geoapify API",
-    "Solved real-world challenges: CORS setup, socket architecture, API key security, and cross-browser networking issues",
-  ];
-
   useGSAP(() => {
     const cards = gsap.utils.toArray(".infodiv");
 
     cards.forEach((card) => {
       const headline = card.querySelector(".headline");
       const text = card.querySelector(".paragraph");
-
-      const iphone = card.querySelector(".iphone");
-      const split = new SplitText(headline, { type: "chars" });
-      const splittext = new SplitText(text, { type: "lines" });
+      const iphone = card.querySelector(".mobile");
 
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: card, // ← this specific card, not the class
-          start: "top 80%",
-          end: () => (window.innerWidth < 768 ? "top 30%" : "top top"),
+          start: "top bottom",
+          end: () => (window.innerWidth < 768 ? "top 50%" : "top 40%"),
           scrub: 1,
-          invalidateOnRefresh: true,
         },
       });
 
-      tl.from(card, { opacity: 1, duration: 1 })
+      tl.from(headline, {
+        x: "-50vw",
+        duration: 1.8,
+        opacity: 0,
+        ease: "power3.out",
+      })
         .from(
-          split.chars,
-          { y: 10, opacity: 0, duration: 2, stagger: 0.3 },
+          iphone,
+          { x: "50vw", opacity: 0, duration: 2, ease: "power2.out" },
           "<",
         )
-        .from(iphone, { y: 100, opacity: 0, duration: 3 }, "<")
         .from(
-          splittext.lines,
-          { y: 10, opacity: 0, duration: 1, stagger: 0.3 },
+          text,
+          { y: "80vw", opacity: 0, duration: 3, ease: "power3.out" },
           "<",
         );
 
@@ -68,74 +60,62 @@ const ProjectDetails = ({ obj }) => {
   });
 
   return (
-    <section className="maindiv h-fit pb-20 px-10 flex flex-col md:gap-[30vh] gap-52 items-center relative ">
+    <section className="maindiv h-fit pb-20 md:px-4 px-2 lg:px-6 flex flex-col md:gap-[30vh] xl:gap-52 gap-20 items-center relative ">
       <h1
         id="Headtext"
-        className="  font-thin  text-[7vw] md:translate-y-[30vh] translate-y-[15vh] text-white tracking-widest "
+        className="  font-thin  text-[7vw] md:translate-y-[30vh] text-white tracking-widest "
       >
         Details
       </h1>
       {obj.map((e) => {
         return (
-          <div
-            className={`infodiv sticky top-[20vh] md:top-[10vh] mt-10 md:h-[80vh] sm:h-[50vh] h-[60vh] md:w-[80vw] w-[90vw] rounded-sm bg-white border-2 border-[#87ceeb] lg:px-10 md:px-6 sm:px-4 py-1 px-2 overflow-hidden`}
-          >
-            <a href={e.link}>
-              <h1
-                className={`headline pointer-events-auto  opacity-100 font-[Schabo] absolute  sm:bottom-0 lg:bottom-0  md:bottom-0 text-black w-full  md:w-full  text-start sm:w-2/3 md:text-6xl lg:text-8xl xl:text-[120px] 2xl:text-[180px] text-[10vw] `}
-              >
-                {e.title}
-              </h1>
-            </a>
-
-            <a href={e?.link}>
-              <Iphone
-                src={e.mobileImg}
-                className={
-                  "iphone absolute md:right-20 right-1/50  bottom-0 sm:h-90  md:h-100 lg:h-120 xl:h-160 2xl:h-200  h-90 pointer-events-auto"
-                }
-              />
-            </a>
-
-            <div className=" flex  flex-row w-full h-full rounded-2xl  ">
-              <div className=" md:flex-3 flex-[4] rounded-2xl flex items-end sm:items-start md:items-start lg:items-start xl:items-center py-2">
-                <p className="w-3/4 paragraph popins font-bold text-gray-900 text-[10px] sm:text-[12px] md:text-[18px] lg:text-[24px]   ">
-                  <h1 className="text-[12px] sm:text-[14px] md:text-[20px] lg:text-[22px] xl:text-[26px] 2xl:text-[30px]">
-                    {e?.tag}
-                  </h1>
-                  <ul>
-                    {e?.feat?.map((e) => {
-                      return (
-                        <li className="mt-1 font-light   sm:text-[10px] md:text-[14px] lg:text-[16px] xl:text-[18px] 2xl:text-[22px] text-[8px]">
-                          <span className="font-medium text-black/90">
-                            • {e?.split("—")[0]}
-                          </span>
-                          :
-                          <span className="text-black/70">
-                            {e?.split("—")[1]}
-                          </span>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </p>
-              </div>
+          <div className=" w-full xl:w-[80vw] infodiv aspect-video relative z-10 rounded-lg flex  xl:gap-2 ">
+            <div className="w-[70%]  h-full rounded-2xl flex flex-col gap-1 xl:gap-2">
               <div
-                className={`${e.bgcolor} w-2/5 md:flex-1 flex-2 text-white px-2 py-4 rounded`}
+                className={`w-full h-fit py-2 md:py-4 lg:py-6 xl: headline bg-white/5  outline-1 outline-white/30 backdrop-blur-md rounded-lg flex flex-col xl:justify-around justify-center px-4 `}
               >
-                <h1 className="font-bold md:mb-3 mb-1 lg:text-3xl text-2xl font-[akira] tracking-wider w-full text-center">
-                  Tech stack
+                <h1 className="text-white h-auto font-[akira] text-sm md:text-2xl lg:text-4xl xl:text-[4vw] ">
+                  {e?.title}
                 </h1>
-                <ul className="flex md:flex-row flex-row w-full md:gap-4 gap-1 flex-wrap justify-center items-end ">
+                <div className="w-fit h-fit flex flex-row flex-wrap gap-1 md:gap-2 lg:gap-4 xl:gap-10">
                   {e.tech.map((e) => {
                     return (
-                      <li className=" w-fit aspect-square lg:text-4xl md:text-3xl sm:text-2xl text-xl ">
+                      <span className=" w-fit aspect-square  text-xs md:text-sm lg:text-2xl xl:text-3xl ">
                         {e}
+                      </span>
+                    );
+                  })}
+                </div>
+              </div>
+              <div className="w-full min-h-fit h-full paragraph outline-1 outline-white/10 bg-black/50 backdrop-blur-lg rounded-lg text-white flex justify-around flex-col px-4 py-6 ">
+                <h1 className="text-[12px] sm:text-[14px] md:text-[20px] lg:text-[22px] xl:text-[26px] 2xl:text-[28px] font-semibold">
+                  {e?.tag}
+                </h1>
+                <ul>
+                  {e?.feat?.map((e) => {
+                    return (
+                      <li className="mt-1 font-light   sm:text-[10px] md:text-[14px] lg:text-[16px] xl:text-[18px] 2xl:text-[20px] text-[8px]">
+                        <span className="font-medium text-white/90">
+                          • {e?.split("—")[0]}
+                        </span>
+                        :
+                        <span className="text-white/70">
+                          {e?.split("—")[1]}
+                        </span>
                       </li>
                     );
                   })}
                 </ul>
               </div>
+            </div>
+            <div
+              className="mobile md:w-[30%] w-[40%] h-full  flex flex-col items-center justify-start cursor-pointer pointer-events-auto"
+              onClick={() => (window.location.href = e?.link)}
+            >
+              <Iphone
+                className={"relative h-65 md:h-110 lg:h-130 xl:h-full"}
+                src={e?.mobileImg}
+              />
             </div>
           </div>
         );

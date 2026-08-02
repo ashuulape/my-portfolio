@@ -717,18 +717,18 @@ const MagicBento = ({
 
                   <div className="p-5 flex justify-between flex-col h-full">
                     <div className="card__header flex justify-between gap-3 relative text-white">
-                      <span className="card__label text-end w-full text-sm md:text-2xl font-extralight">
+                      <span className="card__label text-end w-full text-sm xl:text-xl font-extralight">
                         {card.label}
                       </span>
                     </div>
                     <div className="card__content flex flex-col relative text-white">
                       <h3
-                        className={`card__title font-semibold md:text-2xl text-sm m-0 mb-1 ${textAutoHide ? "text-clamp-1" : ""}`}
+                        className={`card__title font-semibold xl:text-xl text-sm m-0 mb-1 ${textAutoHide ? "text-clamp-1" : ""}`}
                       >
                         {card.title}
                       </h3>
                       <p
-                        className={`card__description md:text-lg text-xs font-thin leading-5 opacity-90 ${textAutoHide ? "text-clamp-2" : ""}`}
+                        className={`card__description xl:text-sm   text-xs font-thin leading-5 opacity-90 ${textAutoHide ? "text-clamp-2" : ""}`}
                       >
                         {card.description}
                       </p>
