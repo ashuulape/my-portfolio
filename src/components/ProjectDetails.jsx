@@ -63,7 +63,7 @@ const ProjectDetails = ({ obj }) => {
     <section className="maindiv h-fit pb-20 md:px-4 px-2 lg:px-6 flex flex-col md:gap-[30vh] xl:gap-52 gap-20 items-center relative ">
       <h1
         id="Headtext"
-        className="  font-thin  text-[7vw] md:translate-y-[30vh] text-white tracking-widest "
+        className="  font-thin  text-[7vw]  text-white tracking-widest "
       >
         Details
       </h1>

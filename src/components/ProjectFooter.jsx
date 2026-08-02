@@ -3,6 +3,8 @@ import CardSwap, { Card } from "./CardSwap";
 import MDB from "../assets/projectImg/MDB.png";
 import Pokecard from "../assets/projectImg/PokeCard.png";
 import Pin from "../assets/projectImg/Pin.png";
+import CircularGallery from "./CircularGallery";
+import AkiraFont from "../fonts/Akira Expanded Demo.otf";
 
 const ProjectFooter = () => {
   let width, height;
@@ -37,27 +39,30 @@ const ProjectFooter = () => {
   console.log(window.outerWidth);
   const extra = [
     {
-      title: "MDB",
+      text: "MDB",
       discription:
         "Search any movie, get every detail — cast, ratings, trailers, and more",
       image: MDB,
+      link: "https://mdb69.netlify.app/",
     },
     {
-      title: "PokeCard",
+      text: "PokeCard",
       discription: "A simple Pokémon card game to play with a friend",
       image: Pokecard,
+      link: "https://pokecard69.netlify.app/",
     },
     {
-      title: "Pinsearch",
+      text: "Pinsearch",
       discription:
         "A Pinterest-style image search app, built with Redux to sharpen state management skills.",
       image: Pin,
+      link: "https://github.com/ashuulape",
     },
   ];
 
   return (
-    <section className="md:h-[90dvh] h-[60dvh] relative  md:text-lg text-xs ">
-      <div className="md:px-8 px-2 text-white font-extralight font-[Galano] md:w-1/2 text-center">
+    <section className="lg:h-[90dvh] h-[60dvh] relative  lg:text-lg text-xs mt-[10vh]  ">
+      <div className="lg:px-8 px-2 h-fit text-white font-extralight font-[Galano] lg:w-full text-center flex flex-col justify-start items-center">
         <h1 className="font-black md:text-6xl text-3xl font-[Akira]">
           Other Projects
         </h1>
@@ -69,36 +74,23 @@ const ProjectFooter = () => {
           one's grading the code
         </p>
       </div>
-
-      <CardSwap
-        cardDistance={70}
-        verticalDistance={130}
-        delay={4000}
-        pauseOnHover={true}
-        width={width}
-        height={height}
-      >
-        {extra.map((e) => {
-          return (
-            <Card
-              image={e.image}
-              className={"px-4 py-2 flex flex-col justify-between h-full"}
-            >
-              <div>
-                <h3 className="text-white text-2xl font-bold w-full">
-                  {e.title}
-                </h3>
-                <p className="text-white text-xs font-extralight  w-full">
-                  {e.discription}
-                </p>
-              </div>
-              <div>
-                <p className="text-white">helll</p>
-              </div>
-            </Card>
-          );
-        })}
-      </CardSwap>
+      <div className=" h-[80%] md:h-[90%] w-full mb-10 ">
+        <CircularGallery
+          items={extra}
+          bend={1}
+          textColor="#ffffff"
+          borderRadius={0}
+          scrollEase={0.03}
+          // Optionally load a custom font for the labels.
+          // Accepts a stylesheet URL (e.g. Google Fonts) or a direct font file.
+          fontUrl={AkiraFont}
+          font="bold 30px Akira"
+          scrollSpeed={2}
+        />
+      </div>
+      <h2 className="text-sm md:text-2xl text-white/30 absolute bottom-[5%] w-full text-center">
+        Drag to view projects{" "}
+      </h2>
     </section>
   );
 };
