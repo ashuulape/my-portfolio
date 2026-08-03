@@ -5,23 +5,28 @@
 @import "@fontsource-variable/jetbrains-mono";
 @font-face {
   font-family: 'Akira';
-  src: url(fonts/Akira\ Expanded\ Demo.otf);
+  src: url(fonts/AkiraExpanded-SuperBold.woff2) format('woff2');
+     font-display: swap;
 }
 @font-face {
   font-family: 'Schabo';
-  src: url(fonts/SCHABO-Condensed.otf);
+  src: url(fonts/SCHABO-Condensed.woff2) format('woff2');
+     font-display: swap;
 }
 @font-face {
   font-family: 'Galano';
-  src: url(fonts/GalanoGrotesqueLightItalic.otf);
+  src: url(fonts/GalanoGrotesque-LightItalic.woff2) format('woff2');
+     font-display: swap;
 }
 @font-face {
   font-family: 'Lowen';
-  src: url(fonts/WS\ Lowen\ Demo.ttf);
+  src: url(fonts/WS\ Lowen\ Demo.ttf) format('woff2');
+     font-display: swap;
 }
 @font-face {
   font-family: 'might';
-  src: url(fonts/Might.ttf);
+  src: url(fonts/Might-Regular.woff2) format('woff2');
+     font-display: swap;
 }
 @custom-variant dark (&:is(.dark *));
 

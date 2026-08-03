@@ -4,7 +4,7 @@ import MDB from "../assets/projectImg/MDB.png";
 import Pokecard from "../assets/projectImg/Pokecard.png";
 import Pin from "../assets/projectImg/Pin.png";
 import CircularGallery from "./CircularGallery";
-import AkiraFont from "../fonts/Akira Expanded Demo.otf";
+import AkiraFont from "../fonts/AkiraExpanded-SuperBold.woff2";
 
 const ProjectFooter = () => {
   let width, height;
