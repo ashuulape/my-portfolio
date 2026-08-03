@@ -1,35 +1,39 @@
 import React from "react";
 import InfiniteMenu from "./components/InfiniteMenu";
-import methinking from "./assets/meThinking.png";
+import home from "./assets/home.png";
+import about from "./assets/about.png";
+import projects from "./assets/projects.png";
+import conatact from "./assets/contacts.png";
+import email from "./assets/email.png";
 
 const Infinity = () => {
   const items = [
     {
-      image: "https://picsum.photos/300/300?grayscale",
+      image: home,
       link: "/",
       title: "Home",
       description: "This is pretty cool, right?",
     },
     {
-      image: "https://picsum.photos/400/400?",
+      image: about,
       link: "/about",
       title: "About Me",
       description: "This is pretty cool, right?",
     },
     {
-      image: "https://picsum.photos/500/500?grayscale",
+      image: conatact,
       link: "/Contact",
       title: "Contact",
       description: "This is pretty cool, right?",
     },
     {
-      image: "https://picsum.photos/600/600?grayscale",
+      image: projects,
       link: "/Projects",
       title: "Projects",
       description: "This is pretty cool, right?",
     },
     {
-      image: "https://picsum.photos/600/600?grayscale",
+      image: email,
       link: "mailto:ashuulape@gmail.com",
       title: "Email",
       description: "Want to Hire me?",
