@@ -158,7 +158,7 @@ const Projects = () => {
       <Slide color={"bg-[#87ceeb]"} ref={slideRef} />
       <Intro text={"PROJECTS"} color={"text-[#87ceeb]"} />
 
-      <div className="fixed w-dvw h-dvh z-0">
+      <div className="fixed full-height w-full pointer-events-auto z-0  ">
         <LightPillar
           topColor="#87ceeb"
           bottomColor="#ffcafc"
@@ -172,7 +172,7 @@ const Projects = () => {
           interactive={true}
           mixBlendMode="screen"
           quality="high"
-          className="pointer-events-auto"
+          className="pointer-events-auto absolute full-height w-full"
         />
       </div>
 

@@ -61,7 +61,7 @@ const HorizontalScroll = ({ scrollObj }) => {
       "<",
     );
     tl.to(projectsEl, {
-      x: window.outerWidth > 768 ? "-520dvw" : "-225dvh",
+      x: window.outerWidth > 768 ? "-260dvw" : "-490dvw",
       duration: 7,
     });
 

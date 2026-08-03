@@ -411,8 +411,8 @@ const LightPillar = ({
   if (!webGLSupported) {
     return (
       <div
-        className={`w-full fixed top-0 left-0 flex items-center justify-center bg-black/10 text-gray-500 text-sm ${className}`}
-        style={{ mixBlendMode, height: '100dvh' }}
+        className={`w-full absolute top-0 left-0 flex items-center justify-center bg-black/10 text-gray-500 text-sm ${className}`}
+        style={{ mixBlendMode }}
       >
         WebGL not supported
       </div>
@@ -422,8 +422,8 @@ const LightPillar = ({
   return (
     <div
       ref={containerRef}
-      className={`w-full fixed z-[0] top-0 left-0 pointer-events-auto ${className}`}
-      style={{ mixBlendMode, height: '100dvh' }}
+      className={`w-full absolute z-[0] top-0 left-0 pointer-events-auto ${className}`}
+      style={{ mixBlendMode }}
     />
   );
 };
