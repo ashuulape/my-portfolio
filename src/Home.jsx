@@ -147,7 +147,7 @@ const Home = () => {
           </div>
         </div>
         {window.innerWidth < 768 && (
-          <h2 className="w-full text-center text-white/30 relative">
+          <h2 className="w-full text-center text-xs text-white/30 relative">
             GSAP animations not optimized for mobile devices if possible try to
             visit the site from laptop/PC
           </h2>
