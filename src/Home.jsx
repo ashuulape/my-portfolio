@@ -8,8 +8,7 @@ import RotatingText from "./components/RotatingText";
 import StaggeredMenu from "./components/StaggeredMenu";
 import logo from "./assets/mask.png";
 import { LogoSlide } from "./components/LogoSlide";
-import { motion } from "framer-motion";
-import SplitText from "./components/SplitText";
+
 import SpecularButton from "./components/SpecularButton";
 import { useNavigate } from "react-router-dom";
 import Intro from "./components/Intro";

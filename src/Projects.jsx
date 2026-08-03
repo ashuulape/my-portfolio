@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Slide } from "./Slide";
-import { motion } from "framer-motion";
-import SplitText from "./components/SplitText";
+
 import StaggeredMenu from "./components/StaggeredMenu";
 import portPc from "./assets/portPc.png";
 import portMobile from "./assets/portMobile.png";

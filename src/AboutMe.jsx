@@ -6,9 +6,7 @@ import MagicBento from "./components/MagicBento";
 import TextPressure from "./components/TextPressure";
 import SideRays from "./components/SideRays";
 import gsap from "gsap";
-// import Scrolltext from "./components/Scrolltext";
-import SplitText from "./components/SplitText";
-import { motion } from "motion/react";
+
 import Scrolltext from "./components/Scrolltext";
 import Intro from "./components/Intro";
 import DotField from "./components/DotField";

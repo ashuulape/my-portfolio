@@ -3,7 +3,6 @@ import Intro from "./components/Intro";
 import { Slide } from "./Slide";
 import StaggeredMenu from "./components/StaggeredMenu";
 import Plasma from "./components/Plasma";
-import GlassSurface from "./components/GlassSurface";
 
 const Contact = () => {
   const slideRef = useRef(null);
