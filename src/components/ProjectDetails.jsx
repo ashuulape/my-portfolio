@@ -18,8 +18,8 @@ const ProjectDetails = ({ obj }) => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: card, // ← this specific card, not the class
-          start: "top bottom",
-          end: () => (window.innerWidth < 768 ? "top 50%" : "top 40%"),
+          start: () => (window.innerWidth < 768 ? "top 80%" : "top bottom"),
+          end: () => (window.innerWidth < 768 ? "top 20%" : "top 45%"),
           scrub: 1,
         },
       });
