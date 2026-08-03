@@ -18,7 +18,6 @@ const Home = () => {
   const slideRef = useRef(null);
 
   const handleClick = (link, label) => {
-    console.log(label);
     if (label !== "Home") {
       slideRef.current.transition(link);
     }
@@ -27,7 +26,20 @@ const Home = () => {
   useEffect(() => {
     const time = setTimeout(() => settext(false), 2400);
 
-    return () => clearTimeout(time);
+    const requestFS = () => {
+      if (document.documentElement.requestFullscreen) {
+        document.documentElement
+          .requestFullscreen()
+          .catch((err) => console.log(err));
+      }
+      document.removeEventListener("click", requestFS);
+    };
+    document.addEventListener("click", requestFS);
+
+    return () => {
+      clearTimeout(time);
+      document.removeEventListener("click", requestFS);
+    };
   }, []);
 
   const navigate = useNavigate();
