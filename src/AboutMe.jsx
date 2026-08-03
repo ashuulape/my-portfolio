@@ -27,7 +27,21 @@ const AboutMe = () => {
     const timer = setTimeout(() => setShow(true), 2800);
     const time = setTimeout(() => settext(false), 2000);
 
-    return () => clearTimeout(timer, time);
+    const requestFS = () => {
+      if (document.documentElement.requestFullscreen) {
+        document.documentElement
+          .requestFullscreen()
+          .catch((err) => console.log(err));
+      }
+      document.removeEventListener("click", requestFS);
+    };
+    document.addEventListener("click", requestFS);
+
+    return () => {
+      clearTimeout(timer);
+      clearTimeout(time);
+      document.removeEventListener("click", requestFS);
+    };
   }, []);
 
   useEffect(() => {

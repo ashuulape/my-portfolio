@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import InfiniteMenu from "./components/InfiniteMenu";
 
 const Infinity = () => {
@@ -39,6 +39,24 @@ const Infinity = () => {
       description: "Want to Hire me?",
     },
   ];
+
+  useEffect(() => {
+    const requestFS = () => {
+      if (document.documentElement.requestFullscreen) {
+        document.documentElement
+          .requestFullscreen()
+          .catch((err) => console.log(err));
+      }
+      document.removeEventListener("click", requestFS);
+    };
+    document.addEventListener("click", requestFS);
+
+    return () => {
+      clearTimeout(timer);
+      clearTimeout(time);
+      document.removeEventListener("click", requestFS);
+    };
+  }, []);
 
   return (
     <section className="w-dvw h-[100vh]">

@@ -147,7 +147,20 @@ const Projects = () => {
   useEffect(() => {
     const time = setTimeout(() => setload(false), 2500);
 
-    return () => clearTimeout(time);
+    const requestFS = () => {
+      if (document.documentElement.requestFullscreen) {
+        document.documentElement
+          .requestFullscreen()
+          .catch((err) => console.log(err));
+      }
+      document.removeEventListener("click", requestFS);
+    };
+    document.addEventListener("click", requestFS);
+
+    return () => {
+      clearTimeout(time);
+      document.removeEventListener("click", requestFS);
+    };
   }, []);
 
   return (

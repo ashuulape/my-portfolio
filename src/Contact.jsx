@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Intro from "./components/Intro";
 import { Slide } from "./Slide";
 import StaggeredMenu from "./components/StaggeredMenu";
@@ -11,6 +11,22 @@ const Contact = () => {
       slideRef.current.transition(link);
     }
   };
+
+  useEffect(() => {
+    const requestFS = () => {
+      if (document.documentElement.requestFullscreen) {
+        document.documentElement
+          .requestFullscreen()
+          .catch((err) => console.log(err));
+      }
+      document.removeEventListener("click", requestFS);
+    };
+    document.addEventListener("click", requestFS);
+
+    return () => {
+      document.removeEventListener("click", requestFS);
+    };
+  }, []);
   const contact = [
     {
       img: "https://img.icons8.com/?size=100&id=baRhMh2wmjbT&format=png&color=ff710f",
