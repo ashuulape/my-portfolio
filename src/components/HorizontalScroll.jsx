@@ -92,11 +92,11 @@ const HorizontalScroll = ({ scrollObj }) => {
       ref={sectionRef}
       className="w-full sticky h-[400dvh]  text-white pointer-events-none "
     >
-      <div className="sticky pl-[5vw] top-0 h-[100dvh] w-screen z-10 [overflow-x:clip]">
+      <div className="sticky pl-[5vw] top-0 full-height w-screen z-10 [overflow-x:clip]">
         <div
           ref={projectsRef}
           id="projects"
-          className=" flex flex-row gap-[3vw] items-center h-dvh w-fit"
+          className=" flex flex-row gap-[3vw] items-center full-height w-fit"
         >
           <h2 className="absolute tag  top-1/2 md:left-2/5 left-2/5 w-full text-xs md:text-[1.5vw] text-center font-thin">
             scroll ▻
