@@ -101,6 +101,7 @@ const Projects = () => {
       mobileImg:
         "https://res.cloudinary.com/dwuhsjldf/image/upload/f_auto,q_auto/v1785779152/portMobile_kdobh8.png",
       bgcolor: "7949A6",
+      link: "https://ashuportfolio69.onrender.com",
       tech: [
         <SiReact color="#61DAFB" />,
         <SiTailwindcss color="#06B6D4" />,
