@@ -57,12 +57,12 @@ const Intro = (props) => {
       className="full-height fixed  z-999 my-[10vh] w-full flex items-center justify-center pointer-events-none"
     >
       <h1
-        className={` introtext text-black absolute tracking-widest flex justify-center text-center font-[lowen] text-[30vw] w-fit h-fit md:translate-y-[100dvh] translate-y-[100dvh]  font-medium  pointer-events-auto z-10 `}
+        className={` introtext text-black absolute tracking-widest flex justify-center text-center font-[Lowen] text-[30vw] w-fit h-fit md:translate-y-[100dvh] translate-y-[100dvh]  font-medium  pointer-events-auto z-10 `}
       >
         {props.text}
       </h1>
       <h1
-        className={`${props.color} introtext absolute tracking-widest flex justify-center text-center font-[lowen] text-[30vw] w-fit h-fit md:translate-y-[100dvh] translate-y-[100dvh]  font-medium  pointer-events-auto z-8 `}
+        className={`${props.color} introtext absolute tracking-widest flex justify-center text-center font-[Lowen] text-[30vw] w-fit h-fit md:translate-y-[100dvh] translate-y-[100dvh]  font-medium  pointer-events-auto z-8 `}
       >
         {props.text}
       </h1>
