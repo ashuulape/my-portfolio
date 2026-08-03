@@ -39,7 +39,8 @@ const HorizontalScroll = ({ scrollObj }) => {
 
     tl.to(projectsEl, {
       scale: 5,
-      x: "200vw",
+      // Push the scaled element off to the right based on actual viewport width
+      x: () => window.innerWidth * (window.innerWidth > 768 ? 2 : 3.8),
       force3D: true,
       ease: "none",
       duration: 1,
@@ -61,8 +62,18 @@ const HorizontalScroll = ({ scrollObj }) => {
       "<",
     );
     tl.to(projectsEl, {
-      x: window.outerWidth > 768 ? "-260dvw" : "-490dvw",
+      x: () => {
+        // The first tween scales the element to 5x (transform-origin: center center by default).
+        // At scale=5, the visual right edge = centerX + finalX + (naturalWidth × 5 / 2)
+        // We want that right edge = window.innerWidth (the sticky div's right boundary).
+        const scale = 4;
+        const naturalWidth = projectsEl.scrollWidth;
+        const rect = projectsEl.getBoundingClientRect(); // natural rect at init (scale=1, x=0)
+        const centerX = rect.left + rect.width / 3;
+        return window.innerWidth - centerX - (naturalWidth * scale) / 3.5;
+      },
       duration: 7,
+      ease: "none",
     });
 
     return () => {
@@ -85,7 +96,7 @@ const HorizontalScroll = ({ scrollObj }) => {
         <div
           ref={projectsRef}
           id="projects"
-          className=" flex flex-row gap-[3vw] items-center h-dvh w-full"
+          className=" flex flex-row gap-[3vw] items-center h-dvh w-fit"
         >
           <h2 className="absolute tag  top-1/2 md:left-2/5 left-2/5 w-full text-xs md:text-[1.5vw] text-center font-thin">
             scroll ▻
