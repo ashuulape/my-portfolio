@@ -2,19 +2,13 @@ import React, { useEffect, useRef, useState } from "react";
 import { Slide } from "./Slide";
 
 import StaggeredMenu from "./components/StaggeredMenu";
-import portPc from "./assets/portPc.png";
-import portMobile from "./assets/portMobile.png";
+
 import HorizontalScroll from "./components/HorizontalScroll";
 import ProjectDetails from "./components/ProjectDetails";
 import ProjectFooter from "./components/ProjectFooter";
 import LightPillar from "./components/LightPillar";
 import DotField from "./components/DotField";
-import UberPc from "./assets/projectImg/UberPC.png";
-import UberMobile from "./assets/projectImg/UberMobile.png";
-import GamePC from "./assets/projectImg/GamePC.png";
-import GameMobile from "./assets/projectImg/GameMobile.png";
-import BankPC from "./assets/projectImg/BankPc.png";
-import BankMobile from "./assets/projectImg/BankMobile.png";
+
 import {
   SiReact,
   SiJavascript,
@@ -38,7 +32,7 @@ import Intro from "./components/Intro";
 const Projects = () => {
   const scrollObj = [
     {
-      bg: UberPc,
+      bg: "https://res.cloudinary.com/dwuhsjldf/image/upload/f_auto,q_auto/v1785777621/UberPC_nyaftm.png",
       title: "Uber Clone",
       tag: "A real-time Uber-style ride-hailing app with live GPS tracking and Socket.IO-powered ride matching",
       feat: [
@@ -49,7 +43,8 @@ const Projects = () => {
         "Secure Authentication — JWT-based auth with HTTP-only cookies, bcrypt password hashing, and token blacklisting with MongoDB TTL auto-expiry",
         "Route Visualization — GeoJSON polyline routes drawn on dark-themed map tiles, with address autocomplete and reverse geocoding via Geoapify",
       ],
-      mobileImg: UberMobile,
+      mobileImg:
+        "https://res.cloudinary.com/dwuhsjldf/image/upload/f_auto,q_auto/v1785777622/UberMobile_xrca7l.png",
       bgcolor: "343134",
       link: "https://myuber69.onrender.com/",
       tech: [
@@ -68,7 +63,7 @@ const Projects = () => {
       ],
     },
     {
-      bg: BankPC,
+      bg: "https://res.cloudinary.com/dwuhsjldf/image/upload/f_auto,q_auto/v1785777618/BankPc_aqfwtz.png",
       title: "Banking System",
       tag: "A secure banking backend with JWT auth and a double-entry ledger for atomic, auditable transactions.",
       feat: [
@@ -78,7 +73,8 @@ const Projects = () => {
         "Role-Based Access Control — Privileged systemUser flag restricts sensitive operations to authorized users",
         "Automated Email Notifications — Welcome and transaction emails via Nodemailer with Gmail OAuth2",
       ],
-      mobileImg: BankMobile,
+      mobileImg:
+        "https://res.cloudinary.com/dwuhsjldf/image/upload/f_auto,q_auto/v1785777618/BankMobile_tgsese.png",
       bgcolor: "D8CFBC",
       link: "https://nextbank69.onrender.com/",
       tech: [
@@ -92,7 +88,7 @@ const Projects = () => {
       ],
     },
     {
-      bg: portPc,
+      bg: "https://res.cloudinary.com/dwuhsjldf/image/upload/f_auto,q_auto/v1785779155/portPc_hcb2s7.png",
       title: "Portfolio",
       tag: "This project — an interactive 3D portfolio featuring custom WebGL shaders, physics lanyard, and GSAP animations",
       feat: [
@@ -102,7 +98,8 @@ const Projects = () => {
         "GSAP ScrollTrigger & Kinetic Text — Smooth scroll-linked slide-in animations, kinetic text pressure, and character-split transitions",
         "3D iPhone Mockups — Dynamic project detail presentation with interactive iPhone frames and live project demos",
       ],
-      mobileImg: portMobile,
+      mobileImg:
+        "https://res.cloudinary.com/dwuhsjldf/image/upload/f_auto,q_auto/v1785779152/portMobile_kdobh8.png",
       bgcolor: "7949A6",
       tech: [
         <SiReact color="#61DAFB" />,
@@ -112,7 +109,7 @@ const Projects = () => {
       ],
     },
     {
-      bg: GamePC,
+      bg: "https://res.cloudinary.com/dwuhsjldf/image/upload/f_auto,q_auto/v1785777622/GamePC_fsoayk.png",
       title: "GameFlix",
       tag: "A Netflix-style web app for discovering and exploring games, powered by the RAWG API.",
       feat: [
@@ -124,7 +121,8 @@ const Projects = () => {
         "RAWG API Integration — Real-time game data sourced from RAWG.io's game database",
         "Fully Responsive Design — Optimized layout for desktop, tablet, and mobile",
       ],
-      mobileImg: GameMobile,
+      mobileImg:
+        "https://res.cloudinary.com/dwuhsjldf/image/upload/f_auto,q_auto/v1785777624/GameMobile_xzkgwy.png",
       bgcolor: "BC0912",
       link: "https://gameflix69.netlify.app/",
       tech: [

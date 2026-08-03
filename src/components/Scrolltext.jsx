@@ -3,7 +3,6 @@ import gsap from "gsap";
 import { ScrollTrigger, SplitText } from "gsap/all";
 import React, { useRef } from "react";
 import OrbitImages from "./OrbitImages";
-import meThinking from "../assets/meThinking.png";
 
 const Scrolltext = () => {
   console.log(window.outerWidth);
@@ -146,7 +145,7 @@ const Scrolltext = () => {
           <div className="absolute top-0 left-1/2 -translate-x-1/2 h-full flex items-end justify-center z-0">
             <img
               id="me"
-              src={meThinking}
+              src="https://res.cloudinary.com/dwuhsjldf/image/upload/f_auto,q_auto/v1785778822/meThinking_ykqkkg.png"
               alt="Me thinking"
               className="w-full  h-auto object-fit drop-shadow-[#FF80F2] drop-shadow-xl/25 saturate-[0]"
             />

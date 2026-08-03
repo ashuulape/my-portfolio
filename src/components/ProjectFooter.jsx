@@ -1,8 +1,5 @@
 import React from "react";
-import CardSwap, { Card } from "./CardSwap";
-import MDB from "../assets/projectImg/MDB.png";
-import Pokecard from "../assets/projectImg/Pokecard.png";
-import Pin from "../assets/projectImg/Pin.png";
+
 import CircularGallery from "./CircularGallery";
 import AkiraFont from "../fonts/AkiraExpanded-SuperBold.woff2";
 
@@ -42,20 +39,23 @@ const ProjectFooter = () => {
       text: "MDB",
       discription:
         "Search any movie, get every detail — cast, ratings, trailers, and more",
-      image: MDB,
+      image:
+        "https://res.cloudinary.com/dwuhsjldf/image/upload/f_auto,q_auto/v1785777621/MDB_tuhoad.png",
       link: "https://mdb69.netlify.app/",
     },
     {
       text: "PokeCard",
       discription: "A simple Pokémon card game to play with a friend",
-      image: Pokecard,
+      image:
+        "https://res.cloudinary.com/dwuhsjldf/image/upload/f_auto,q_auto/v1785777620/Pokecard_zwzewp.png",
       link: "https://pokecard69.netlify.app/",
     },
     {
       text: "Pinsearch",
       discription:
         "A Pinterest-style image search app, built with Redux to sharpen state management skills.",
-      image: Pin,
+      image:
+        "https://res.cloudinary.com/dwuhsjldf/image/upload/f_auto,q_auto/v1785777621/Pin_qi44em.png",
       link: "https://github.com/ashuulape",
     },
   ];

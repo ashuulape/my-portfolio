@@ -1,46 +1,50 @@
 import React from "react";
 import InfiniteMenu from "./components/InfiniteMenu";
-import home from "./assets/home.png";
-import about from "./assets/about.png";
-import projects from "./assets/projects.png";
-import conatact from "./assets/contacts.png";
-import email from "./assets/email.png";
 
 const Infinity = () => {
   const items = [
     {
-      image: home,
+      image:
+        "https://res.cloudinary.com/dwuhsjldf/image/upload/f_auto,q_auto/v1785779835/home_sxobi7.png",
       link: "/",
       title: "Home",
       description: "This is pretty cool, right?",
     },
     {
-      image: about,
+      image:
+        "https://res.cloudinary.com/dwuhsjldf/image/upload/f_auto,q_auto/v1785779804/about_wssrlo.png",
       link: "/about",
       title: "About Me",
       description: "This is pretty cool, right?",
     },
     {
-      image: conatact,
+      image:
+        "https://res.cloudinary.com/dwuhsjldf/image/upload/f_auto,q_auto/v1785779836/contacts_cyq9lj.png",
       link: "/Contact",
       title: "Contact",
       description: "This is pretty cool, right?",
     },
     {
-      image: projects,
+      image:
+        "https://res.cloudinary.com/dwuhsjldf/image/upload/f_auto,q_auto/v1785779834/projects_bs5pa3.png",
       link: "/Projects",
       title: "Projects",
       description: "This is pretty cool, right?",
     },
     {
-      image: email,
+      image:
+        "https://res.cloudinary.com/dwuhsjldf/image/upload/f_auto,q_auto/v1785779606/email_cxeudz.png",
       link: "mailto:ashuulape@gmail.com",
       title: "Email",
       description: "Want to Hire me?",
     },
   ];
 
-  return <InfiniteMenu items={items} scale={2} />;
+  return (
+    <section className="w-dvw h-[100vh]">
+      <InfiniteMenu items={items} scale={2} />;
+    </section>
+  );
 };
 
 export default Infinity;

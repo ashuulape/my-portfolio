@@ -1,11 +1,5 @@
 import { useRef, useEffect, useState, useCallback } from "react";
 import { gsap } from "gsap";
-import ME from "../assets/me.jpg";
-import aboutGame from "../assets/aboutGame.png";
-import MERN from "../assets/MERN.png";
-import Edu from "../assets/Edu.png";
-import Catdev from "../assets/Catdev.png";
-import Nerd from "../assets/Nerd.png";
 
 const DEFAULT_PARTICLE_COUNT = 12;
 const DEFAULT_SPOTLIGHT_RADIUS = 300;
@@ -14,7 +8,8 @@ const MOBILE_BREAKPOINT = 768;
 
 const cardData = [
   {
-    background: Edu,
+    background:
+      "https://res.cloudinary.com/dwuhsjldf/image/upload/f_auto,q_auto/v1785778822/MERN_izfzxt.png",
 
     color: "#120F17",
     title: "B-Tech",
@@ -22,7 +17,8 @@ const cardData = [
     label: "Eduction",
   },
   {
-    background: MERN,
+    background:
+      "https://res.cloudinary.com/dwuhsjldf/image/upload/f_auto,q_auto/v1785778822/MERN_izfzxt.png",
 
     color: "#120F17",
     title: "MERN",
@@ -30,28 +26,32 @@ const cardData = [
     label: "Tech Stack",
   },
   {
-    background: ME,
+    background:
+      "https://res.cloudinary.com/dwuhsjldf/image/upload/f_auto,q_auto/v1785778822/me_pqcite.jpg",
     color: "#120F17",
     title: "Ashutosh Ulape",
     description: "loves to learn & build something new everyday",
     label: "ME",
   },
   {
-    background: Catdev,
+    background:
+      "https://res.cloudinary.com/dwuhsjldf/image/upload/f_auto,q_auto/v1785778823/Catdev_ygruln.png",
     color: "#120F17",
     title: "Developer",
     description: "FrontEnd / Fullstack Developer",
     label: "Role",
   },
   {
-    background: Nerd,
+    background:
+      "https://res.cloudinary.com/dwuhsjldf/image/upload/f_auto,q_auto/v1785778823/Nerd_mju2d4.png",
     color: "#120F17",
     title: "Nerdy",
     description: "Wants to learn everything at a same time",
     label: "Personality",
   },
   {
-    background: aboutGame,
+    background:
+      "https://res.cloudinary.com/dwuhsjldf/image/upload/f_auto,q_auto/v1785778824/aboutGame_bxrsgm.png",
     color: "#120F17",
     title: "Video games",
     description: "Love to play games, specially Story modes ",
