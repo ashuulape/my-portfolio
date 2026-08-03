@@ -1207,8 +1207,10 @@ export default function InfiniteMenu({ items = [], scale = 1.0 }) {
           ease-[cubic-bezier(0.25,0.1,0.25,1.0)]
           ${
             isMoving
-              ? "bottom-[-80px] opacity-0 pointer-events-none duration-[100ms] scale-0 -translate-x-1/2"
-              : "bottom-[3.8em] opacity-100 pointer-events-auto duration-[500ms] scale-100 -translate-x-1/2"
+              ? "bottom-[-150px] opacity-0 pointer-events-none duration-[100ms] scale-0 -translate-x-1/2"
+              : window.innerWidth < 768
+                ? `bottom-[17em] opacity-100 pointer-events-auto duration-[500ms] scale-100 -translate-x-1/2`
+                : `bottom-[10em] opacity-100 pointer-events-auto duration-[500ms] scale-100 -translate-x-1/2`
           }
         `}
           >
