@@ -134,6 +134,12 @@ const Home = () => {
             )}
           </div>
         </div>
+        {window.innerWidth < 768 && (
+          <h2 className="w-full text-center text-white/30 relative">
+            GSAP animations not optimized for mobile devices if possible try to
+            visit the site from laptop/PC
+          </h2>
+        )}
         <LogoSlide />
       </div>
     </div>
