@@ -61,7 +61,7 @@ const HorizontalScroll = ({ scrollObj }) => {
       "<",
     );
     tl.to(projectsEl, {
-      x: window.outerWidth > 768 ? "-255vw" : "-225dvh",
+      x: window.outerWidth > 768 ? "-520dvw" : "-225dvh",
       duration: 7,
     });
 
@@ -85,7 +85,7 @@ const HorizontalScroll = ({ scrollObj }) => {
         <div
           ref={projectsRef}
           id="projects"
-          className=" flex flex-row gap-[3vw] items-center h-full w-full"
+          className=" flex flex-row gap-[3vw] items-center h-dvh w-full"
         >
           <h2 className="absolute tag  top-1/2 md:left-2/5 left-2/5 w-full text-xs md:text-[1.5vw] text-center font-thin">
             scroll ▻

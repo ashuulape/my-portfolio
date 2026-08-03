@@ -158,21 +158,23 @@ const Projects = () => {
       <Slide color={"bg-[#87ceeb]"} ref={slideRef} />
       <Intro text={"PROJECTS"} color={"text-[#87ceeb]"} />
 
-      <LightPillar
-        topColor="#87ceeb"
-        bottomColor="#ffcafc"
-        intensity={0.9}
-        rotationSpeed={0.1}
-        glowAmount={0.002}
-        pillarWidth={5}
-        pillarHeight={0.4}
-        noiseIntensity={0.5}
-        pillarRotation={25}
-        interactive={true}
-        mixBlendMode="screen"
-        quality="high"
-        className="pointer-events-auto"
-      />
+      <div className="fixed w-dvw h-dvh z-0">
+        <LightPillar
+          topColor="#87ceeb"
+          bottomColor="#ffcafc"
+          intensity={0.9}
+          rotationSpeed={0.1}
+          glowAmount={0.002}
+          pillarWidth={5}
+          pillarHeight={0.4}
+          noiseIntensity={0.5}
+          pillarRotation={25}
+          interactive={true}
+          mixBlendMode="screen"
+          quality="high"
+          className="pointer-events-auto"
+        />
+      </div>
 
       <DotField
         dotRadius={1.5}

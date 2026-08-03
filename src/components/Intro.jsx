@@ -54,7 +54,7 @@ const Intro = (props) => {
   return (
     <section
       ref={container}
-      className="full-height fixed  z-999 my-[10vh] w-full flex items-center justify-center pointer-events-none"
+      className="full-height fixed  z-999 md:my-[10vh] w-full flex items-center justify-center pointer-events-none"
     >
       <h1
         className={` introtext text-black absolute tracking-widest flex justify-center text-center font-[Lowen] text-[30vw] w-fit h-fit md:translate-y-[100dvh] translate-y-[100dvh]  font-medium  pointer-events-auto z-10 `}
