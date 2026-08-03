@@ -98,7 +98,7 @@ const HorizontalScroll = ({ scrollObj }) => {
           id="projects"
           className=" flex flex-row gap-[3vw] items-center full-height w-fit"
         >
-          <h2 className="absolute tag  top-1/2 md:left-2/5 left-2/5 w-full text-xs md:text-[1.5vw] text-center font-thin">
+          <h2 className="absolute tag   md:left-2/5 left-2/5 w-full text-xs md:text-[1.5vw] text-center font-thin">
             scroll ▻
           </h2>
           <h1 className="text-[25vw] font-[might] tracking-widest z-1  md:text-[12vw] flex justify-center flex-col font-black shrink-0">
