@@ -90,7 +90,7 @@ const HorizontalScroll = ({ scrollObj }) => {
           <h2 className="absolute tag  top-1/2 md:left-2/5 left-2/5 w-full text-xs md:text-[1.5vw] text-center font-thin">
             scroll ▻
           </h2>
-          <h1 className="text-[25vw] font-[might] tracking-widest z-1 md:translate-y-6 md:text-[12vw] flex justify-center flex-col font-black shrink-0">
+          <h1 className="text-[25vw] font-[might] tracking-widest z-1  md:text-[12vw] flex justify-center flex-col font-black shrink-0">
             PROJECTS
           </h1>
 
@@ -98,6 +98,7 @@ const HorizontalScroll = ({ scrollObj }) => {
             <a href={obj?.link}>
               <div
                 key={index}
+                loading="lazy"
                 className="image laptop md:h-[8vw] h-10 md:translate-0 -translate-y-8 pointer-events-auto"
                 style={{ backgroundImage: `url(${obj.bg})` }}
               >

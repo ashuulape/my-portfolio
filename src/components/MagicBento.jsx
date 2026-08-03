@@ -704,6 +704,7 @@ const MagicBento = ({
                 >
                   <div className="absolute w-full h-full group md:opacity-100 opacity-60">
                     <img
+                      loading="lazy"
                       className="absolute inset-0 w-full h-full object-cover rounded-2xl p-0.5 md:mix-blend-overlay scale-110 group-hover:scale-100 transition-all duration-500 ease-out group-hover:opacity-0"
                       src={card.background}
                       alt=""

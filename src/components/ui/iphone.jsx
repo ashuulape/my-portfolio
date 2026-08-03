@@ -62,6 +62,7 @@ export function Iphone({ src, videoSrc, className, style, ...props }) {
         >
           <img
             src={src}
+            loading="lazy"
             alt=""
             className="block size-full object-cover scale-100 "
           />
