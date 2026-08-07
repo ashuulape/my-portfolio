@@ -40,7 +40,7 @@ const HorizontalScroll = ({ scrollObj }) => {
     tl.to(projectsEl, {
       scale: 5,
       // Push the scaled element off to the right based on actual viewport width
-      x: () => window.innerWidth * (window.innerWidth > 768 ? 2 : 3.8),
+      x: () => window.innerWidth * (window.innerWidth > 768 ? 2.5 : 3.8),
       force3D: true,
       ease: "none",
       duration: 1,
@@ -50,6 +50,7 @@ const HorizontalScroll = ({ scrollObj }) => {
       {
         opacity: 0,
         duration: 1,
+        scrub: 1,
       },
       "<",
     );
@@ -70,7 +71,7 @@ const HorizontalScroll = ({ scrollObj }) => {
         const naturalWidth = projectsEl.scrollWidth;
         const rect = projectsEl.getBoundingClientRect(); // natural rect at init (scale=1, x=0)
         const centerX = rect.left + rect.width / 3;
-        return window.innerWidth - centerX - (naturalWidth * scale) / 3.5;
+        return window.innerWidth - centerX - (naturalWidth * scale) / 3.8;
       },
       duration: 7,
       ease: "none",
@@ -98,7 +99,7 @@ const HorizontalScroll = ({ scrollObj }) => {
           id="projects"
           className=" flex flex-row gap-[3vw] items-center full-height w-fit"
         >
-          <h2 className="absolute tag   md:left-2/5 left-2/5 w-full text-xs md:text-[1.5vw] text-center font-thin">
+          <h2 className="absolute tag   md:left-2/5 left-2/5 w-full text-xs md:text-[1.5vw] text-center opacity-100 font-thin">
             scroll ▻
           </h2>
           <h1 className="text-[25vw] font-[might] tracking-widest z-1  md:text-[12vw] flex justify-center flex-col font-black shrink-0">

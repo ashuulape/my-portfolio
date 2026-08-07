@@ -57,12 +57,6 @@ const AboutMe = () => {
     }
   }, [show]);
 
-  const socialItems = [
-    { label: "Twitter", link: "https://twitter.com" },
-    { label: "GitHub", link: "https://github.com" },
-    { label: "LinkedIn", link: "https://linkedin.com" },
-  ];
-
   return (
     <div
       ref={boxRef}
@@ -108,8 +102,6 @@ const AboutMe = () => {
       <div className="h-full w-full absolute pointer-events-none z-10">
         <StaggeredMenu
           position="left"
-          socialItems={socialItems}
-          displaySocials
           displayItemNumbering={true}
           menuButtonColor="#ffffff"
           openMenuButtonColor="#fff"

@@ -52,8 +52,6 @@ const Infinity = () => {
     document.addEventListener("click", requestFS);
 
     return () => {
-      clearTimeout(timer);
-      clearTimeout(time);
       document.removeEventListener("click", requestFS);
     };
   }, []);

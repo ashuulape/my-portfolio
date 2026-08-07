@@ -110,6 +110,35 @@ const Projects = () => {
       ],
     },
     {
+      bg: "https://res.cloudinary.com/dwuhsjldf/image/upload/f_auto,q_auto/v1786126185/Screenshot_2026-08-07_233611_bbwdz1.png",
+      title: "FreeTube",
+      tag: "Every Movie, Every Server, One Click Away.",
+      feat: [
+        "Multi-Server Streaming — switch between 5 backup servers instantly if one lags or goes down",
+        "Instant Search — find any movie by title in real time",
+        "Rich Movie Details — posters, backdrops, ratings, cast, genres, and runtime at a glance",
+        "Trailers & Reviews — watch official trailers and read community reviews before you commit",
+        "Fully Responsive — sleek glassmorphism UI that works on any device",
+        "Smooth GSAP Animations — fluid navigation drawer and transitions",
+        "Skeleton Loading States — no jarring blank screens while data loads",
+        "Seamless Pagination — browse extensive movie catalogs without slowdown",
+        "Secure Proxy Backend — Node.js/Express server keeps API keys and endpoints safe",
+      ],
+      mobileImg:
+        "https://res.cloudinary.com/dwuhsjldf/image/upload/f_auto,q_auto/v1786126187/Screenshot_2026-08-07_233656_v7hou8.png",
+      bgcolor: "7949A6",
+      link: "freetube69.onrender.com",
+      tech: [
+        <SiReact color="#61DAFB" />,
+        <SiTailwindcss color="#06B6D4" />,
+        <SiJavascript color="#F7DF1E" />,
+        <SiNodedotjs color="#339933" />,
+        <SiExpress color="#000000" />,
+
+        <SiGsap color="#88CE02" />,
+      ],
+    },
+    {
       bg: "https://res.cloudinary.com/dwuhsjldf/image/upload/f_auto,q_auto/v1785777622/GamePC_fsoayk.png",
       title: "GameFlix",
       tag: "A Netflix-style web app for discovering and exploring games, powered by the RAWG API.",

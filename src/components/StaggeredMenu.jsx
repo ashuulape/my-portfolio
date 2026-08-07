@@ -13,7 +13,7 @@ const item = [
 const socialItem = [
   { label: "GitHub", link: "https://github.com/ashuulape" },
   { label: "LinkedIn", link: "www.linkedin.com/in/ashutosh-ulape-6b43a4325" },
-  { label: "Instagram", link: "" },
+  { label: "Instagram", link: "https://www.instagram.com/_ash.u09_/" },
 ];
 
 export const StaggeredMenu = ({

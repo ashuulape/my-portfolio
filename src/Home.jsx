@@ -68,7 +68,6 @@ const Home = () => {
       <div className="full-height w-screen absolute pointer-events-none">
         <StaggeredMenu
           position="left"
-          displaySocials
           displayItemNumbering={true}
           menuButtonColor="#ffffff"
           openMenuButtonColor="#fff"
@@ -76,8 +75,6 @@ const Home = () => {
           colors={["#B497CF", "#5227FF"]}
           logoUrl={logo}
           accentColor="#5227FF"
-          onMenuOpen={() => console.log("Menu opened")}
-          onMenuClose={() => console.log("Menu closed")}
           className={"absolute"}
           transitionfun={handleClick}
         />
