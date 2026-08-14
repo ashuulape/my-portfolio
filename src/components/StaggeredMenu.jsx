@@ -453,13 +453,15 @@ export const StaggeredMenu = ({
           aria-label="Main navigation header"
         >
           <div
-            className="sm-logo flex items-center select-none pointer-events-auto"
+            className="sm-logo flex items-center h-full select-none pointer-events-auto"
             aria-label="Logo"
           >
             <img
-              src={logoUrl || "../src/assets/mask.png"}
+              src={
+                "https://res.cloudinary.com/dwuhsjldf/image/upload/v1785782070/1785782035193_synwgz.png"
+              }
               alt="Logo"
-              className="sm-logo-img block h-8 w-auto object-contain"
+              className={`sm-logo-img block h-10 w-auto object-contain ${open && "invert-100"}  `}
               draggable={false}
               width={110}
               height={24}
