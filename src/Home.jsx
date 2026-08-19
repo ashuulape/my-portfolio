@@ -143,7 +143,8 @@ const Home = () => {
             ) : (
               <a
                 href={Resume}
-                className="bg-[#771bc6]/30 text-[#D7CFFF] px-4 py-2 text-sm rounded-sm border-1 border-[#771bc6] flex gap-2 items-center pointer-events-auto"
+                target="_blank"
+                className="relative bg-[#771bc6]/20 text-[#D7CFFF] px-4 py-2 text-sm rounded-sm border-1 border-[#771bc6] flex gap-2 items-center pointer-events-auto"
               >
                 {" "}
                 Resume
