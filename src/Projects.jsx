@@ -118,6 +118,7 @@ const Projects = () => {
         "Instant Search — find any movie by title in real time",
         "Rich Movie Details — posters, backdrops, ratings, cast, genres, and runtime at a glance",
         "Trailers & Reviews — watch official trailers and read community reviews before you commit",
+        "Watch Together (Theater Mode) — create/join rooms for synchronized movie watching with WebRTC video/audio chat and real-time text chat",
         "Fully Responsive — sleek glassmorphism UI that works on any device",
         "Smooth GSAP Animations — fluid navigation drawer and transitions",
         "Skeleton Loading States — no jarring blank screens while data loads",
@@ -134,7 +135,7 @@ const Projects = () => {
         <SiJavascript color="#F7DF1E" />,
         <SiNodedotjs color="#339933" />,
         <SiExpress color="#000000" />,
-
+        <SiSocketdotio color="#010101" />,
         <SiGsap color="#88CE02" />,
       ],
     },

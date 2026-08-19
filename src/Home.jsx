@@ -8,6 +8,7 @@ import RotatingText from "./components/RotatingText";
 import StaggeredMenu from "./components/StaggeredMenu";
 import logo from "./assets/mask.png";
 import { LogoSlide } from "./components/LogoSlide";
+import Resume from "./assets/Ashutosh_Ulape_React.pdf";
 
 import SpecularButton from "./components/SpecularButton";
 import { useNavigate } from "react-router-dom";
@@ -22,6 +23,10 @@ const Home = () => {
       slideRef.current.transition(link);
     }
   };
+
+  function downloadFile() {
+    window.open(Resume, "_blank");
+  }
 
   useEffect(() => {
     const time = setTimeout(() => settext(false), 2400);
@@ -101,45 +106,47 @@ const Home = () => {
             </h3>
             <br />
             {window.outerWidth > 768 ? (
-              <SpecularButton
-                size={"sm"}
-                radius={7}
-                tint="#5c00f9"
-                tintOpacity={0.12}
-                blur={0}
-                textColor="#D7CFFF"
-                lineColor="#f2a9a9"
-                baseColor="#8755F1"
-                intensity={0.8}
-                shineSize={10}
-                shineFade={40}
-                thickness={1}
-                speed={0.9}
-                followMouse
-                proximity={190}
-                autoAnimate={false}
-                onClick={() => handleClick("about")}
-                className="flex flex-col "
-              >
-                <h1 className="flex gap-2">
-                  About me
-                  <img
-                    src="https://img.icons8.com/?size=100&id=39969&format=png&color=D7CFFF"
-                    className="cover h-4 "
-                    alt=""
-                  />
-                </h1>
-              </SpecularButton>
+              <a className="pointer-events-auto">
+                <SpecularButton
+                  size={"sm"}
+                  radius={7}
+                  tint="#5c00f9"
+                  tintOpacity={0.12}
+                  blur={0}
+                  textColor="#D7CFFF"
+                  lineColor="#f2a9a9"
+                  baseColor="#8755F1"
+                  intensity={0.8}
+                  shineSize={10}
+                  shineFade={40}
+                  thickness={1}
+                  speed={0.9}
+                  followMouse
+                  proximity={190}
+                  autoAnimate={false}
+                  onClick={() => downloadFile()}
+                  className="flex flex-col "
+                >
+                  <h1 className="flex gap-2">
+                    Resume
+                    <img
+                      src="https://img.icons8.com/?size=100&id=39969&format=png&color=D7CFFF"
+                      className="cover h-4 "
+                      alt=""
+                    />
+                  </h1>
+                </SpecularButton>
+              </a>
             ) : (
-              <button className="bg-[#771bc6]/30 text-[#D7CFFF] px-4 py-2 text-sm rounded-sm border-1 border-[#771bc6] flex gap-2 items-center">
+              <a className="bg-[#771bc6]/30 text-[#D7CFFF] px-4 py-2 text-sm rounded-sm border-1 border-[#771bc6] flex gap-2 items-center pointer-events-auto">
                 {" "}
-                About me
+                Resume
                 <img
                   src="https://img.icons8.com/?size=100&id=39969&format=png&color=D7CFFF"
                   className="cover h-4 "
                   alt=""
                 />
-              </button>
+              </a>
             )}
           </div>
         </div>

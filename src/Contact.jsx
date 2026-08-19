@@ -51,8 +51,8 @@ const Contact = () => {
     },
   ];
   return (
-    <section className="w-full full-height relative">
-      <div className="min-h-screen max-h-2/3 h-fit  w-full px-4 sm:px-6 md:px-10 py-8 fixed z-10 text-white flex items-center justify-center pointer-events-auto overflow-y-auto">
+    <section className="w-full full-height  relative">
+      <div className="min-h-screen max-h-2/3 h-fit  w-full px-4 sm:px-6 md:px-10 pt-8 fixed z-10 text-white flex items-center justify-center pointer-events-auto overflow-y-auto">
         <div className="bg-[#ff710f]/3 md:gap-10 gap-5 w-full sm:w-11/12 md:w-3/4 min-h-fit md:h-3/4 border-2 rounded-2xl border-[#ff710f] flex items-center justify-center flex-col py-8 md:py-0">
           <div className="h-fit w-full px-6 sm:px-10 md:p-12 text-center flex flex-col gap-2 justify-end mt-[5vw]">
             <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#ff710f]">
