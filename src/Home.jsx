@@ -25,10 +25,7 @@ const Home = () => {
   };
 
   function downloadFile() {
-    window.open(
-      "https://drive.google.com/file/d/1k0y5_rTVPBv8FaJ3ZQEAcR5Yt0L6pWWl/view?usp=drive_link",
-      "_blank",
-    );
+    window.open(`${import.meta.env.VITE_RESUME_LINK}`, "_blank");
   }
 
   useEffect(() => {
